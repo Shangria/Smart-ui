@@ -1,16 +1,16 @@
 import {BrowserRouter as Router} from "react-router-dom";
 import Header from "./Components/Header";
+import Sidebar from "./Components/Sidebar";
 import {GlobalStyle} from "./GlobalStyle";
 import {DefaultStyle} from "./Default";
-import {variables} from "./Variables";
-
 
 function App() {
     return (
         <Router>
             <GlobalStyle/>
             <DefaultStyle/>
-            <Header variables={variables}/>
+            <Sidebar/>
+            <Header/>
         </Router>
     );
 }

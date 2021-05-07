@@ -1,5 +1,4 @@
 import React from 'react';
-import {Container} from "react-bootstrap";
 import {FaBars} from 'react-icons/fa';
 import Logo from "./Logo";
 import {
@@ -18,43 +17,43 @@ import {
 const Header = () => {
     return (
         <NavHeader>
-                <NavbarContainer>
-                    <NavLogoContainer to='\'>
-                        <Logo/>
-                    </NavLogoContainer>
-                    <MobileIcon>
-                        <FaBars/>
-                    </MobileIcon>
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks to='home'>
-                                Home
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='whatWeDo'>
-                                What we do
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='ourAdvantages'>
-                                Our advantages
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='portfolio'>
-                                Portfolio
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavBtn>
-                                <NavBtnLink to='ContactUs'>
-                                    Contact us
-                                </NavBtnLink>
-                            </NavBtn>
-                        </NavItem>
-                    </NavMenu>
-                </NavbarContainer>
+            <NavbarContainer>
+                <NavLogoContainer to='\'>
+                    <Logo/>
+                </NavLogoContainer>
+                <MobileIcon>
+                    <FaBars/>
+                </MobileIcon>
+                <NavMenu>
+                    <NavItem>
+                        <NavLinks to='home'>
+                            Home
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to='whatWeDo'>
+                            What we do
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to='ourAdvantages'>
+                            Our advantages
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to='portfolio'>
+                            Portfolio
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavBtn>
+                            <NavBtnLink to='ContactUs'>
+                                Contact us
+                            </NavBtnLink>
+                        </NavBtn>
+                    </NavItem>
+                </NavMenu>
+            </NavbarContainer>
         </NavHeader>
     );
 };

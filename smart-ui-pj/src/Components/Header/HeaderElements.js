@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import {variables} from "../../Variables";
-import {Link as LinkLogo} from 'react-router-dom';
+import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 
 export const NavHeader = styled.header`
-  background-color: olivedrab;
   height: 80px;
   //margin-top: -80px;
   display: flex;
@@ -17,6 +16,7 @@ export const NavHeader = styled.header`
   top: 0;
   z-index: 10;
 `;
+
 export const NavbarContainer = styled.nav`
   display: flex;
   z-index: 1;
@@ -25,7 +25,8 @@ export const NavbarContainer = styled.nav`
   justify-content: space-between;
   padding: 0 15px 0 15px;
 `;
-export const NavLogoContainer = styled(LinkLogo)`
+
+export const NavLogoContainer = styled(LinkR)`
   cursor: pointer;
 `;
 
@@ -36,10 +37,9 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
     font-size: 30px;
     cursor: pointer;
-    color: black;
+    color: ${() => variables.menuColor};
   }
 `;
 
@@ -61,11 +61,10 @@ export const NavLinks = styled(LinkScroll)`
   align-items: center;
   text-decoration: none;
   padding-left: 50px;
-  height: 100%;
   cursor: pointer;
-  
+
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid ${() => variables.accentColor};
   }
 `;
 
@@ -77,7 +76,7 @@ export const NavBtn = styled.div`
   }
 `;
 
-export const NavBtnLink = styled(LinkLogo)`
+export const NavBtnLink = styled(LinkR)`
   padding: 12px 18px;
   color: ${() => variables.mainBg};
   background-color: ${() => variables.btColor};
