@@ -10,28 +10,28 @@ export const NavHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   position: sticky;
   top: 0;
   z-index: 10;
 `;
-export const NavbarContainer = styled.header`
+export const NavbarContainer = styled.nav`
   display: flex;
-  justify-content: space-between;
-  height: 80px;
   z-index: 1;
   width: 100%;
-  padding: 0 15px;
   max-width: 1310px;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
 `;
 export const NavLogoContainer = styled(LinkLogo)`
-  padding: 0 15px;
   cursor: pointer;
 `;
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${() => variables.desktopMin}) {
     display: block;
     position: absolute;
     top: 0;
@@ -46,37 +46,31 @@ export const MobileIcon = styled.div`
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
-  list-style: none;
-  text-align: center;
-  margin-right: -22px;
 
-  @media screen and (max-width: ${() => variables.tabletMin}) {
+  @media screen and (max-width: ${() => variables.desktopMin}) {
     display: none;
   }
 `;
 
 export const NavItem = styled.li`
-  height: 80px;
+  color: ${() => variables.menuColor};
 `;
 
 export const NavLinks = styled(LinkScroll)`
-  color: white;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding-left: 50px;
   height: 100%;
   cursor: pointer;
-
+  
   &.active {
     border-bottom: 3px solid #01bf71;
   }
 `;
 
-export const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-
+export const NavBtn = styled.div`
+  padding-left: 50px;
 
   @media screen and (max-width: ${() => variables.tabletMin}) {
     display: none;
@@ -84,24 +78,19 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(LinkLogo)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  box-shadow: 1px 0px 8px 0px rgba(11, 11, 11, 0.58);
+  padding: 12px 18px;
+  color: ${() => variables.mainBg};
+  background-color: ${() => variables.btColor};
+  border-radius: 3px;
+  transition: .3s background;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: white;
-    color: #010606;
+    background: ${() => variables.accentColor};
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 4px 4px 10px rgb(170 170 170 / 80%);
   }
+}
 `
 
 

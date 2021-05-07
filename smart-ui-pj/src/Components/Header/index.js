@@ -1,4 +1,5 @@
 import React from 'react';
+import {Container} from "react-bootstrap";
 import {FaBars} from 'react-icons/fa';
 import Logo from "./Logo";
 import {
@@ -16,8 +17,7 @@ import {
 
 const Header = () => {
     return (
-        <>
-            <NavHeader>
+        <NavHeader>
                 <NavbarContainer>
                     <NavLogoContainer to='\'>
                         <Logo/>
@@ -31,11 +31,31 @@ const Header = () => {
                                 Home
                             </NavLinks>
                         </NavItem>
+                        <NavItem>
+                            <NavLinks to='whatWeDo'>
+                                What we do
+                            </NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='ourAdvantages'>
+                                Our advantages
+                            </NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='portfolio'>
+                                Portfolio
+                            </NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavBtn>
+                                <NavBtnLink to='ContactUs'>
+                                    Contact us
+                                </NavBtnLink>
+                            </NavBtn>
+                        </NavItem>
                     </NavMenu>
                 </NavbarContainer>
-            </NavHeader>
-
-        </>
+        </NavHeader>
     );
 };
 export default Header;
