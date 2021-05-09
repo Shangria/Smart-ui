@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
-import {FaTimes} from 'react-icons/fa';
+import {CgClose} from 'react-icons/cg';
 import {variables} from "../../Variables";
 
 export const SidebarContainer = styled.div`
@@ -12,28 +12,31 @@ export const SidebarContainer = styled.div`
   background-color: ${() => variables.mainBg};
   display: flex;
   align-items: center;
-  top: 0;
   left: 0;
   transition: .3s ease-in-out;
-    opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
-    top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
+  opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
+  top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
 `;
 
-export const CloseIcon = styled(FaTimes)`
+export const CloseIcon = styled(CgClose)`
   color: ${() => variables.menuColor};
 `;
 
 export const Icon = styled.div`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   background: transparent;
-  font-size: 30px;
+  font-size: 35px;
   cursor: pointer;
 `;
 
 export const SidebarWrapper = styled.nav`
   color: ${() => variables.menuColor};
+  width: 100%;
+  position: relative;
+  top: 80px;
+  height: 100%;
 `;
 
 export const SidebarMenu = styled.ul`
@@ -48,19 +51,23 @@ export const SidebarLinkWrap = styled.li`
   justify-content: center;
   transition: .2s ease-in-out;
   cursor: pointer;
-  
-  &:hover {
-    color: olive;
-    transition: .2s ease-in-out;
-  }
+  padding: 20px;
+  font-size: 30px;
 `
 export const SidebarLink = styled(LinkScroll)`
   color: ${() => variables.menuColor};
+
+  &:hover {
+    color: ${() => variables.accentColor};
+    transition: .2s ease-in-out;
+  }
 `;
 
 export const SideBtnWrap = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 80px;
 `;
 
 export const SidebarBtn = styled(LinkR)`
@@ -69,6 +76,7 @@ export const SidebarBtn = styled(LinkR)`
   background-color: ${() => variables.btColor};
   border-radius: 3px;
   transition: .3s background;
+  font-size: 30px;
 
   &:hover {
     background: ${() => variables.accentColor};

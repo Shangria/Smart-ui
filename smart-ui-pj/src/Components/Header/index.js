@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaBars} from 'react-icons/fa';
+import {CgFormatJustify} from 'react-icons/cg';
 import Logo from "./Logo";
 import {
     NavHeader,
@@ -14,15 +14,15 @@ import {
 } from "./HeaderElements";
 
 
-const Header = () => {
+const Header = ({toggle}) => {
     return (
         <NavHeader>
             <NavbarContainer>
                 <NavLogoContainer to='\'>
                     <Logo/>
                 </NavLogoContainer>
-                <MobileIcon>
-                    <FaBars/>
+                <MobileIcon onClick={toggle}>
+                    <CgFormatJustify/>
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>

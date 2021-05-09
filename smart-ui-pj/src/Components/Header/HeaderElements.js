@@ -4,7 +4,7 @@ import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 
 export const NavHeader = styled.header`
-  //margin-top: -80px;
+//  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +27,10 @@ export const NavbarContainer = styled.nav`
 
 export const NavLogoContainer = styled(LinkR)`
   cursor: pointer;
+  
+  @media screen and (max-width: ${() => variables.mobileMin}) {
+   width: 150px;
+  }
 `;
 
 export const MobileIcon = styled.div`
@@ -36,7 +40,7 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer;
     color: ${() => variables.menuColor};
   }
