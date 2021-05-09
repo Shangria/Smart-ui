@@ -12,7 +12,7 @@ import {
 } from "./SidebarElements";
 
 const Sidebar = ({isOpen, toggle}) => {
-    console.log(isOpen)
+
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
