@@ -9,7 +9,7 @@ export const SidebarContainer = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: ${() => variables.mainBg};
+  background-color: ${variables.mainBg};
   display: flex;
   align-items: center;
   left: 0;
@@ -19,7 +19,7 @@ export const SidebarContainer = styled.div`
 `;
 
 export const CloseIcon = styled(CgClose)`
-  color: ${() => variables.menuColor};
+  color: ${variables.menuColor};
 `;
 
 export const Icon = styled.div`
@@ -32,7 +32,7 @@ export const Icon = styled.div`
 `;
 
 export const SidebarWrapper = styled.nav`
-  color: ${() => variables.menuColor};
+  color: ${variables.menuColor};
   width: 100%;
   position: relative;
   top: 80px;
@@ -55,10 +55,10 @@ export const SidebarLinkWrap = styled.li`
   font-size: 30px;
 `
 export const SidebarLink = styled(LinkScroll)`
-  color: ${() => variables.menuColor};
+  color: ${variables.menuColor};
 
   &:hover {
-    color: ${() => variables.accentColor};
+    color: ${variables.accentColor};
     transition: .2s ease-in-out;
   }
 `;
@@ -72,14 +72,14 @@ export const SideBtnWrap = styled.div`
 
 export const SidebarBtn = styled(LinkR)`
   padding: 12px 18px;
-  color: ${() => variables.mainBg};
-  background-color: ${() => variables.btColor};
+  color: ${variables.mainBg};
+  background-color: ${variables.btColor};
   border-radius: 3px;
   transition: .3s background;
   font-size: 30px;
 
   &:hover {
-    background: ${() => variables.accentColor};
+    background: ${variables.accentColor};
     color: #fff;
     border: 1px solid #fff;
     box-shadow: 4px 4px 10px rgb(170 170 170 / 80%);

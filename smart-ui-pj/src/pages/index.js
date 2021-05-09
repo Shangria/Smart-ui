@@ -3,6 +3,7 @@ import {GlobalStyle} from "../GlobalStyle";
 import {DefaultStyle} from "../Default";
 import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
+import HeroSection from "../Components/HeroSection";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
             <DefaultStyle/>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Header toggle={toggle}/>
+            <HeroSection/>
         </>
     )
 }
