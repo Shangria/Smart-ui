@@ -20,9 +20,9 @@ export const NavbarContainer = styled.nav`
   display: flex;
   z-index: 1;
   width: 100%;
-  max-width: calc(1310px - 15px);
+  max-width: 1310px;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 30px 15px 0 ;
 `;
 
 export const NavLogoContainer = styled(LinkR)`
