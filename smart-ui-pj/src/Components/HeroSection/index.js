@@ -20,7 +20,7 @@ import {
     HeroSocialName,
     HeroSocialLink,
 } from "./HeroElements";
-import {heroDataImg} from "./HeroData";
+import {heroData} from "./HeroData";
 import HeroImg from './HeroImg';
 import HeroSocialIcon from "./HeroSocialIcon";
 
@@ -28,9 +28,7 @@ import HeroSocialIcon from "./HeroSocialIcon";
 const HeroSection = () => {
     return (
         <HeroContainer id="home">
-            <HeroBg>
-                <HeroTriangle/>
-            </HeroBg>
+                {/*<HeroTriangle/>*/}
             <HeroContent>
                 <HeroTitleContainer>
                     <HeroTitle>We are
@@ -54,12 +52,12 @@ const HeroSection = () => {
                         <HeroSocialMediaText>Our social media:</HeroSocialMediaText>
                         <HeroSocialIcons>
                             <HeroSocialLink href='#'>
-                                <HeroSocialIcon icon={heroDataImg.upWork}>
+                                <HeroSocialIcon icon={heroData.upWork}>
                                 </HeroSocialIcon>
                                 <HeroSocialName>UpWork</HeroSocialName>
                             </HeroSocialLink>
                             <HeroSocialLink href='#'>
-                                <HeroSocialIcon icon={heroDataImg.linkedIn}>
+                                <HeroSocialIcon icon={heroData.linkedIn}>
                                 </HeroSocialIcon>
                                 <HeroSocialName>LinkedIn</HeroSocialName>
                             </HeroSocialLink>
@@ -68,10 +66,10 @@ const HeroSection = () => {
                 </HeroTitleContainer>
                 <HeroImagesContainer>
                     <HeroImgWrapUp>
-                        <HeroImg img={heroDataImg.phone2}/>
+                        <HeroImg img={heroData.phone2}/>
                     </HeroImgWrapUp>
                     <HeroImgWrapDown>
-                        <HeroImg img={heroDataImg.phone1}/>
+                        <HeroImg img={heroData.phone1}/>
                     </HeroImgWrapDown>
                 </HeroImagesContainer>
             </HeroContent>

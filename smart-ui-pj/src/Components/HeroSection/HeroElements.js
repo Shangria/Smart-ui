@@ -1,36 +1,30 @@
 import styled from 'styled-components';
 import {variables} from "../../Variables";
-import {heroDataImg} from './HeroData';
+import {heroData} from './HeroData';
 
 export const HeroContainer = styled.section`
-  position: relative;
-  z-index: 1;
-  top: -115px;
-  display: flex;
-  justify-content: center;
-`;
-
-export const HeroBg = styled.div`
-  position: absolute;
-  right: 0;
-  left: 0;
   min-height: 100vh;
-  background-image: url(${heroDataImg.bg2}), url(${heroDataImg.bg1});
+  background-image: url(${heroData.bg2}), url(${heroData.bg1}), url(${heroData.bg3});
   background-repeat: no-repeat;
   background-position: 100% 0;
-  background-size: 50%;
+  background-size: 50%, 50%, 80%;
   mix-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: -120px;
+  margin-bottom: 100px;
 
   @media (max-width: ${variables.desktopMin}) {
     background-size: 80%;
   }
-}`;
+`;
 
 export const HeroTriangle = styled.div`
   @media (min-width: ${variables.wideScreenXl}) {
     display: block;
     position: absolute;
-    background-image: url(${heroDataImg.bg3});
+    background-image: url(${heroData.bg3});
     background-repeat: no-repeat;
     background-size: 15%;
     z-index: 0;
@@ -44,20 +38,17 @@ export const HeroTriangle = styled.div`
 export const HeroContent = styled.div`
   display: flex;
   flex-direction: row;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  max-width: calc(1310px - 15px);
+  max-width: 1310px;
   width: 100%;
-  padding-top: 60px;
-  @media screen and (max-width: ${variables.desktopMin}) {
+  padding: 65px 15px 0;
+  @media (max-width: ${variables.desktopMin}) {
     flex-direction: column;
   }
 `;
 
 
 export const HeroTitleContainer = styled.div`
-  transform: translate(25%, 50%);
+  transform: translate(0, 50%);
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
@@ -70,7 +61,7 @@ export const HeroTitleContainer = styled.div`
     transform: none;
     top: 80px;
     align-self: end;
-    padding-left: 15px;
+    padding: 15px;
   };
 `;
 
@@ -182,7 +173,6 @@ export const HeroImgWrapDown = styled.div`
     position: static;
   };
 `;
-
 
 
 
