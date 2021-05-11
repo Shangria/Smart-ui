@@ -6,8 +6,8 @@ export const HeroContainer = styled.section`
   min-height: 100vh;
   background-image: url(${heroData.bg2}), url(${heroData.bg1}), url(${heroData.bg3});
   background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 50%, 50%, 80%;
+  background-position: 100% 0, 100% 0, 0 55%;
+  background-size: 50%,50%,230px;
   mix-blend-mode: multiply;
   display: flex;
   justify-content: center;
@@ -16,23 +16,23 @@ export const HeroContainer = styled.section`
   margin-bottom: 100px;
 
   @media (max-width: ${variables.desktopMin}) {
-    background-size: 80%;
+    background-size: 80%, 50%,0%;
   }
 `;
 
 export const HeroTriangle = styled.div`
-  @media (min-width: ${variables.wideScreenXl}) {
-    display: block;
-    position: absolute;
-    background-image: url(${heroData.bg3});
-    background-repeat: no-repeat;
-    background-size: 15%;
-    z-index: 0;
-    width: 80%;
-    height: 100%;
-    top: 35%;
-    left: 0;
-  }
+  // @media (min-width: ${variables.wideScreenXl}) {
+  //   display: block;
+  //   position: absolute;
+  //   background-image: url(${heroData.bg3});
+  //   background-repeat: no-repeat;
+  //   background-size: 15%;
+  //   z-index: 0;
+  //   width: 80%;
+  //   height: 100%;
+  //   top: 35%;
+  //   left: 0;
+  // }
 `;
 
 export const HeroContent = styled.div`

@@ -4,6 +4,7 @@ import {variables} from "../../Variables";
 export const WhatWeDoContainer = styled.section`
   display: flex;
   justify-content: center;
+  padding-top: 50px;
 `;
 
 export const WhatWeDoContainerContent = styled.div`
@@ -47,14 +48,22 @@ export const WhatWeDoCardBox = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px;
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 5px 5px;
+  transition: .3s background;
+  background: ${({hover}) => (hover ? `${variables.accentColor}` : `${variables.mainBg}`)};
+  
   @media (max-width: ${variables.desktopMin}) {
     width: 50%;
     padding-bottom: 20px;
   };
+  
   @media (max-width: ${variables.mobileMin}) {
     width: 100%;
   }
+  
 `;
 
 export const WhatWeDoCardIcon = styled.div`
@@ -64,7 +73,7 @@ export const WhatWeDoCardIcon = styled.div`
   margin-bottom: 15px;
   font-size: 100px;
   padding: 20px;
-  background-color: ${variables.accentColor};
+  background: ${({hover}) => (hover ? `${variables.mainBg}` : `${variables.accentColor}`)};
   border-radius: 25px;
   box-shadow: 0px 5px 30px rgba(0, 217, 166, 0.25);
   transition: .3s background;

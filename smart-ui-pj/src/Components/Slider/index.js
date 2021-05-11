@@ -11,10 +11,10 @@ const SliderCompany = () => {
             type: 'carousel',
             autoplay: 2000,
             startAt: 0,
-            perView: 4,
+            perView: 6,
             breakpoints: {
-                768: {
-                    perView: 1,
+                992: {
+                    perView: 4,
                 }
             },
         }).mount();
