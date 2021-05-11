@@ -33,7 +33,7 @@ const WhatWeDo = () => {
                         attention.</WhatWeDoText>
                 </WhatWeDoTextWrap>
                 <WhatWeDoCardContainer>
-                    <WhatWeDoCard {...whatWeDoDataCard1} icon={<IconDesign fill='red' stroke='red' stroke-width='2px'/>} />
+                    <WhatWeDoCard {...whatWeDoDataCard1} icon={<IconDesign  fill='red' stroke='red' stroke-width='2px'/>} />
                     <WhatWeDoCard {...whatWeDoDataCard2} icon={<IconHtml/>}/>
                     <WhatWeDoCard {...whatWeDoDataCard3} icon={<IconProgramming/>}/>
                     <WhatWeDoCard {...whatWeDoDataCard4} icon={<IconSupport/>}/>
