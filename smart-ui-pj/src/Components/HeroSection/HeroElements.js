@@ -20,21 +20,6 @@ export const HeroContainer = styled.section`
   }
 `;
 
-export const HeroTriangle = styled.div`
-  // @media (min-width: ${variables.wideScreenXl}) {
-  //   display: block;
-  //   position: absolute;
-  //   background-image: url(${heroData.bg3});
-  //   background-repeat: no-repeat;
-  //   background-size: 15%;
-  //   z-index: 0;
-  //   width: 80%;
-  //   height: 100%;
-  //   top: 35%;
-  //   left: 0;
-  // }
-`;
-
 export const HeroContent = styled.div`
   display: flex;
   flex-direction: row;

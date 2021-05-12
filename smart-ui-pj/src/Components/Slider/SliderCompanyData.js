@@ -8,6 +8,7 @@ import Slide6 from "../../Images/logo-6.png";
 export const heroSliderImg = [
     {
         slideImg: Slide1,
+        alt:'company'
     },
     {
         slideImg: Slide2,

@@ -6,6 +6,7 @@ import Header from "../Components/Header";
 import HeroSection from "../Components/HeroSection";
 import SliderCompany from "../Components/Slider";
 import WhatWeDo from "../Components/WhatWeDo";
+import Tools from "../Components/Tools";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ const Home = () => {
             <HeroSection/>
             <SliderCompany/>
             <WhatWeDo/>
+            <Tools/>
         </>
     );
 };

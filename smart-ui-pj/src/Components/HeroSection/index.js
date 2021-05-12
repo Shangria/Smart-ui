@@ -3,8 +3,6 @@ import {Button} from '../ButtonElement';
 import {variables} from "../../Variables";
 import {
     HeroContainer,
-    HeroBg,
-    HeroTriangle,
     HeroBtnWrapper,
     HeroContent,
     HeroSubTitle,
@@ -28,7 +26,6 @@ import HeroSocialIcon from "./HeroSocialIcon";
 const HeroSection = () => {
     return (
         <HeroContainer id="home">
-                {/*<HeroTriangle/>*/}
             <HeroContent>
                 <HeroTitleContainer>
                     <HeroTitle>We are

@@ -5,28 +5,23 @@ import {
     WhatWeDoCardText,
     WhatWeDoCardTitle,
 } from "./WhatWeDoElements";
-
-
 const WhatWeDoCard = ({
-                          cardIcon,
                           cardTitle,
                           cardText,
-                          icon
-
+                          icon,
                       }) => {
+
     const [hover, setHover] = useState(false);
 
     useEffect(() => {
         setHover(hover);
-    }, []);
+    },[] );
 
     return (
         <WhatWeDoCardBox onMouseEnter={() => setHover(true)}
                          onMouseLeave={() => setHover(false)}
-                         hover={hover}
-        >
-            <WhatWeDoCardIcon hover={hover}
-            >
+                         hover={hover}>
+            <WhatWeDoCardIcon hover={hover}>
                 <>{icon}</>
             </WhatWeDoCardIcon>
             <WhatWeDoCardTitle>{cardTitle}</WhatWeDoCardTitle>
