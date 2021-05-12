@@ -72,7 +72,7 @@ export const WhatWeDoCardIcon = styled.div`
   margin: 0 auto;
   margin-bottom: 15px;
   font-size: 100px;
-  padding: 20px;
+  padding: 30px;
   background: ${({hover}) => (hover ? `${variables.mainBg}` : `${variables.accentColor}`)};
   border-radius: 25px;
   box-shadow: 0px 5px 30px rgba(0, 217, 166, 0.25);

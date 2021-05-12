@@ -9,10 +9,11 @@ import {
 
 
 const AdvantagesCard = ({
-                       icon,
-                       title,
-                       text,
-                       alt
+                       logo,
+                            cardTitle,
+                            cardText,
+                            btn,
+                            altAdvantages,
                    }) => {
 
     const [hover, setHover] = useState(false);
@@ -27,11 +28,11 @@ const AdvantagesCard = ({
                       hover={hover}
         >
             <AdvantagesIconWrap>
-                <img src={icon} alt={alt}/>
+               <img src={logo} alt={altAdvantages}/>
             </AdvantagesIconWrap>
             <AdvantagesCardTextWrap>
-                <AdvantagesCadTitle>{title}</AdvantagesCadTitle>
-                <AdvantagesCardText>{text}</AdvantagesCardText>
+                <AdvantagesCadTitle>{cardTitle}</AdvantagesCadTitle>
+                <AdvantagesCardText>{cardText}</AdvantagesCardText>
             </AdvantagesCardTextWrap>
         </AdvantagesCardBox>
     );

@@ -69,15 +69,15 @@ export const AdvantagesCardTextWrap=styled.div`
 `;
 
 export const AdvantagesIconWrap = styled.div`
-  width: 100px;
-  height: 100px;
-  margin-bottom: 25px;
-  font-size: 100px;
-  padding: 20px;
+  height: 212px;
+  width: 212px;
+  background: ${variables.accentColor} ;
   border-radius: 25px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   box-shadow: 0px 5px 30px rgba(0, 217, 166, 0.25);
-  transition: .3s background;
   display: flex;
+  align-items: center;
   justify-content: center;
 `;
 

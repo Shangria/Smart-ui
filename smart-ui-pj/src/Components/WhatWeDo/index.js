@@ -14,11 +14,6 @@ import {
     whatWeDoDataCard3,
     whatWeDoDataCard4,
 } from '../WhatWeDo/WhatWeDoData';
-import {ReactComponent as IconDesign} from '../../Images/icon/icon-design.svg';
-import {ReactComponent as IconHtml} from '../../Images/icon/icon-html.svg';
-import {ReactComponent as IconProgramming} from '../../Images/icon/progr.svg';
-import {ReactComponent as IconSupport} from '../../Images/icon/support.svg';
-
 
 const WhatWeDo = () => {
     return (
@@ -33,10 +28,10 @@ const WhatWeDo = () => {
                         attention.</WhatWeDoText>
                 </WhatWeDoTextWrap>
                 <WhatWeDoCardContainer>
-                    <WhatWeDoCard {...whatWeDoDataCard1} icon={<IconDesign  fill='red' stroke='red' stroke-width='2px'/>} />
-                    <WhatWeDoCard {...whatWeDoDataCard2} icon={<IconHtml/>}/>
-                    <WhatWeDoCard {...whatWeDoDataCard3} icon={<IconProgramming/>}/>
-                    <WhatWeDoCard {...whatWeDoDataCard4} icon={<IconSupport/>}/>
+                    <WhatWeDoCard {...whatWeDoDataCard1}/>
+                    <WhatWeDoCard {...whatWeDoDataCard2}/>
+                    <WhatWeDoCard {...whatWeDoDataCard3}/>
+                    <WhatWeDoCard {...whatWeDoDataCard4}/>
                 </WhatWeDoCardContainer>
             </WhatWeDoContainerContent>
         </WhatWeDoContainer>

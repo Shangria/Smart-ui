@@ -13,7 +13,7 @@ import {
     advantagesCard2,
     advantagesCard3,
 } from "./AdvantagesData";
-import {ReactComponent as IconDesign} from '../../Images/icon/icon-design.svg';
+
 
 const Advantages = () => {
     return (
