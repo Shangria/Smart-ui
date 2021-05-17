@@ -12,17 +12,22 @@ export const heroSliderImg = [
     },
     {
         slideImg: Slide2,
+        alt:'company'
     },
     {
         slideImg: Slide3,
+        alt:'company'
     },
     {
         slideImg: Slide4,
+        alt:'company'
     },
     {
         slideImg: Slide5,
+        alt:'company'
     },
     {
         slideImg: Slide6,
+        alt:'company'
     },
 ];

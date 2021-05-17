@@ -3,17 +3,17 @@ import {variables} from "../../Variables";
 import {heroData} from './HeroData';
 
 export const HeroContainer = styled.section`
-  min-height: 100vh;
   background-image: url(${heroData.bg2}), url(${heroData.bg1}), url(${heroData.bg3});
   background-repeat: no-repeat;
-  background-position: 100% 0, 100% 0, 0 55%;
-  background-size: 50%,50%,230px;
+  background-position: 100% 0, 100% 0, 0 100%;
+  background-size: 50%,50%,160px;
   mix-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: start;
   margin-top: -120px;
-  margin-bottom: 100px;
+  height: 100%;
+  padding-bottom: 20%;
 
   @media (max-width: ${variables.desktopMin}) {
     background-size: 80%, 50%,0%;
