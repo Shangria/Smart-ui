@@ -3,9 +3,10 @@ import {Link} from 'react-scroll';
 import {variables} from "../Variables";
 
 export const Button = styled(Link)`
+  font-size: 22px;
   padding: ${prop => prop.padding};
-  color: ${variables.mainBg};
-  background-color: ${prop => prop.background};
+  color: ${({primaryColor}) => (primaryColor ? `${variables.accentColor}` : `${variables.mainBg}`)};
+  background: ${({primaryBg}) => (primaryBg ? `${variables.mainBg}` : `${variables.accentColor}`)};
   border-radius: 3px;
   transition: .3s background;
   cursor: pointer;

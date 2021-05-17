@@ -37,7 +37,7 @@ export const AdvantagesText = styled.p`
 
 export const AdvantagesCardWrapper = styled.ul`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   @media (max-width: ${variables.desktopMin}) {
     flex-wrap: wrap;
   };
@@ -51,8 +51,8 @@ export const AdvantagesCardBox = styled.li`
   border-radius: 8px;
   margin: 5px 5px;
   transition: .3s background;
-  background: ${({hover}) => (hover ? `${variables.mainBg}` : '')};
-  width: 20%;
+  background: ${({hover}) => (hover ? `${variables.accentColor}` : `${variables.mainBg}`)};
+  width: 30%;
   padding: 45px 0;
 
   @media (max-width: ${variables.desktopMin}) {
@@ -66,12 +66,13 @@ export const AdvantagesCardBox = styled.li`
 
 export const AdvantagesCardTextWrap=styled.div`
   text-align: center;
+  padding-bottom: 20%;
 `;
 
 export const AdvantagesIconWrap = styled.div`
   height: 212px;
   width: 212px;
-  background: ${variables.accentColor} ;
+  background-color: ${({hover}) => (hover ? `${variables.mainBg}` : `${variables.accentColor}`)};
   border-radius: 25px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -79,6 +80,8 @@ export const AdvantagesIconWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 10px;
+
 `;
 
 export const AdvantagesCadTitle = styled.h3`
