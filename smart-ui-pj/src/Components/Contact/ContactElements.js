@@ -3,13 +3,11 @@ import {contactData} from "./ContactData";
 import {variables} from "../../Variables";
 
 export const ContactWrapper = styled.section`
-  position: relative;
   padding: 8% 0;
-  background-image: url(${contactData.bg2}), url(${contactData.bg1});
-  //background-image: url('../img/bg-5.png'), url('../img/bg-4.png');
+  background-image: url(${contactData.bg3}), url(${contactData.bg2}), url(${contactData.bg1});
   background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: cover;
+  background-position: 110% 90%, 100% 0, 100% 0;
+  background-size: 70% 80%, cover, cover;
   display: flex;
   justify-content: center;
 `;
@@ -19,7 +17,6 @@ export const ContactContent = styled.div`
   max-width: 1310px;
   padding: 0 15px;
   width: 100%;
-  flex-direction: column;
 `;
 
 export const ContactTitle = styled.h3`
@@ -37,6 +34,7 @@ export const ContactTitle = styled.h3`
   }
 `;
 export const ContactAddressContainer = styled.div`
+  width: 65%;
   @media screen and(min-width: ${variables.mobileMax}) {
     display: flex;
     justify-content: space-between;
@@ -68,7 +66,7 @@ export const ContactInfoAddress = styled.address`
 
 export const ContactLinksWrap = styled.div`
   padding: 30px 0;
-  @media screen and(min-width: ${variables.mobileMax}) {
+  @media (min-width: ${variables.mobileMax}) {
     padding-bottom: 40px;
   }
 `;
@@ -88,6 +86,29 @@ export const ContactIcon = styled.img`
 export const ContactLink = styled.a`
 
 `;
+
+export const ContactFormWrapper = styled.div`
+  width: 100%;
+  margin-left: auto;
+  padding-top: 50px;
+
+  @media (min-width: ${variables.desktopMin}) {
+    padding-top: 150px;
+  }
+`;
+
+export const ContactFormContainer = styled.div`
+ 
+`;
+
+export const ContactFormTitle = styled.h3`
+  color: ${variables.mainBg};
+  font-size: 28px;
+  padding-bottom: 15px;
+  font-weight: 600;
+`;
+
+
 
 
 

@@ -10,15 +10,20 @@ import {
     ContactSubTitle,
     ContactTitle,
     ContactContent,
+    ContactFormContainer,
+    ContactFormWrapper,
+    ContactFormTitle
+
 } from "./ContactElements";
 import {contactData} from "./ContactData";
+import ContactForm from "./ConactForm";
 
 const Contact = () => {
     return (
         <ContactWrapper>
             <ContactContent>
-                <ContactTitle>Contact</ContactTitle>
                 <ContactAddressContainer>
+                    <ContactTitle>Contact</ContactTitle>
                     <ContactSubTitle>Our address</ContactSubTitle>
                     <ContactInfoAddress>{contactData.contactInfoCity}</ContactInfoAddress>
                     <ContactInfoAddress>{contactData.contactInfoAve}</ContactInfoAddress>
@@ -43,9 +48,12 @@ const Contact = () => {
                         </ContactLinks>
                     </ContactLinksWrap>
                 </ContactAddressContainer>
-                {/*<ContactForm>*/}
-
-                {/*</ContactForm>*/}
+                <ContactFormWrapper>
+                    <ContactFormContainer>
+                        <ContactFormTitle>Contact form</ContactFormTitle>
+                        <ContactForm/>
+                    </ContactFormContainer>
+                </ContactFormWrapper>
             </ContactContent>
         </ContactWrapper>
     );
