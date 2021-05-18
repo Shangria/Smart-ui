@@ -11,6 +11,9 @@ export const Button = styled(Link)`
   border-radius: 3px;
   transition: .3s background;
   cursor: pointer;
+  @media (max-width: ${variables.desktopMin}) {
+    font-size: 16px;
+  };
 
   &:hover {
     background-color: ${prop => prop.backgroundhover};

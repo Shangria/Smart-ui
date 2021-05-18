@@ -58,16 +58,16 @@ export const AdvantagesCardBox = styled.li`
 
   @media (max-width: ${variables.desktopMin}) {
     width: 45%;
-    padding-bottom: 20px;
+    padding-bottom: 10%;
   };
-  @media (max-width: ${variables.mobileMin}) {
+  @media (max-width: ${variables.mobileMax}) {
     width: 100%;
   };
 `;
 
 export const AdvantagesCardTextWrap=styled.div`
   text-align: center;
-  height: 135px;
+  min-height: 135px;
   padding: 0 20px;
   max-height: 100%;
 `;
