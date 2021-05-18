@@ -15,25 +15,24 @@ const ReviewsSlider = () => {
     useEffect(() => {
         new Glide('.glide-reviews', {
             type: 'slider',
-            // autoplay:2000,
+            autoplay:2000,
             startAt: 0,
             perView: 1,
         }).mount();
     }, []);
 
 
-
     return (
         <div style={glideReviews}
-            className="glide-reviews">
+             className="glide-reviews">
             <div className="glide__track" data-glide-el="track">
                 <ul style={glideSlides}
                     className="glide__slides">
                     {
-                        reviewsSliders.map((slide, index)=>{
-                            return(
+                        reviewsSliders.map((slide, index) => {
+                            return (
                                 <SlideReview
-                                    key={index+"slideReviews"}
+                                    key={index + "slideReviews"}
                                     slide={slide}/>
                             )
                         })
@@ -41,20 +40,19 @@ const ReviewsSlider = () => {
                 </ul>
             </div>
             <div style={glideBullets}
-                className="glide__bullets"
+                 className="glide__bullets"
                  data-glide-el="controls[nav]">
                 {
-                    reviewsSliders.map((slide,index)=>{
-                        return(
-                            <button key={index+"glideBullet"}
-                                className="glide__bullet"
+                    reviewsSliders.map((slide, index) => {
+                        return (
+                            <button key={index + "glideBullet"}
+                                    className="glide__bullet"
                                     style={glideBullet}
-                                    data-glide-dir={"="+index}>
+                                    data-glide-dir={"=" + index}>
                             </button>
                         )
                     })
                 }
-
             </div>
         </div>
     );
