@@ -4,9 +4,10 @@ import {variables} from "../Variables";
 
 export const Button = styled(Link)`
   font-size: 22px;
+  border: 1px solid #fff;
   padding: ${prop => prop.padding};
-  color: ${({primaryColor}) => (primaryColor ? `${variables.accentColor}` : `${variables.mainBg}`)};
-  background: ${({primaryBg}) => (primaryBg ? `${variables.mainBg}` : `${variables.accentColor}`)};
+  color: ${({primarycolor}) => (primarycolor ? `${variables.accentColor}` : `${variables.mainBg}`)};
+  background: ${({primarybg}) => (primarybg ? `${variables.mainBg}` : `${variables.accentColor}`)};
   border-radius: 3px;
   transition: .3s background;
   cursor: pointer;

@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 export const SliderWrap = styled.section`
-  max-width: 995px;
-  margin: 0 auto;
+ display: flex;
+  justify-content: center;
+  padding: 0 15px;
+ 
 `;
 
 export const SliderContent = styled.div`
-  padding: 0 20px;
+  max-width: 1310px;
+  width: 100%;
   overflow: hidden;
 `;
 

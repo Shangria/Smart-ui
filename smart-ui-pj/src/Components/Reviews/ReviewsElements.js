@@ -37,5 +37,7 @@ export const ReviewsText = styled.p`
   width: 100%;
 `;
 
-export const ReviewsSliderContainer=styled.div`
-display: flex`;
+export const ReviewsSliderContainer = styled.div`
+  display: flex;
+  padding: 5% 0;
+`;

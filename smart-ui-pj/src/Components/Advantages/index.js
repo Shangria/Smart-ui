@@ -17,7 +17,7 @@ import {
 
 const Advantages = () => {
     return (
-        <AdvantagesContainer>
+        <AdvantagesContainer id='ourAdvantages'>
             <AdvantagesContentWrap>
                 <AdvantagesTextWrap>
                     <AdvantagesTitle>Our advantages</AdvantagesTitle>

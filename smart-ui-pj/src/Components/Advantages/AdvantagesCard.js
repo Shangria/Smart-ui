@@ -29,16 +29,17 @@ const AdvantagesCard = ({
                       hover={hover}
         >
             <AdvantagesIconWrap hover={hover}>
-               <img src={logo} alt={altAdvantages}/>
+               <img style={{ height: "100%"}}
+                   src={logo} alt={altAdvantages}/>
             </AdvantagesIconWrap>
             <AdvantagesCardTextWrap>
                 <AdvantagesCadTitle>{cardTitle}</AdvantagesCadTitle>
                 {
-                    hover ? <Button
+                    hover ? <Button to="#"
                             padding='20px 60px'
-                            primaryBg='true'
-                            primaryColor='true'
-                        >Write to us</Button>
+                            primarybg='true'
+                            primarycolor='true'
+                        >{btn}</Button>
                     :
                         <AdvantagesCardText>{cardText}</AdvantagesCardText>
                 }

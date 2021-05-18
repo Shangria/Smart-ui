@@ -2,6 +2,12 @@ import {useEffect} from "react";
 import Glide from '@glidejs/glide';
 import {reviewsSliders} from "../SliderReviews/SliderReviewsData";
 import {SlideReview} from "./SlideReviews";
+import {
+    glideReviews,
+    glideSlides,
+    glideBullet,
+    glideBullets
+} from "./styles";
 
 
 const ReviewsSlider = () => {
@@ -16,10 +22,13 @@ const ReviewsSlider = () => {
     }, []);
 
 
+
     return (
-        <div className="glide-reviews">
+        <div style={glideReviews}
+            className="glide-reviews">
             <div className="glide__track" data-glide-el="track">
-                <ul className="glide__slides">
+                <ul style={glideSlides}
+                    className="glide__slides">
                     {
                         reviewsSliders.map((slide, index)=>{
                             return(
@@ -31,8 +40,21 @@ const ReviewsSlider = () => {
                     }
                 </ul>
             </div>
-            <div className="glide__bullets" data-glide-el="controls[nav]">
-                <button className="glide__bullet" data-glide-dir="=0"></button>
+            <div style={glideBullets}
+                className="glide__bullets"
+                 data-glide-el="controls[nav]">
+                {
+                    reviewsSliders.map((slide,index)=>{
+                        return(
+                            <button key={index+"glideBullet"}
+                                className="glide__bullet"
+                                    style={glideBullet}
+                                    data-glide-dir={"="+index}>
+                            </button>
+                        )
+                    })
+                }
+
             </div>
         </div>
     );

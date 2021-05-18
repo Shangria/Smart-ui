@@ -15,7 +15,7 @@ export const DefaultStyle = createGlobalStyle`
       font-size: 16px;
     }
   }
-  
+
   img {
     display: block;
     max-width: 100%;
@@ -35,5 +35,9 @@ export const DefaultStyle = createGlobalStyle`
     @media screen and(min-width: ${variables.desktopMin}) {
       padding-bottom: 6px;
     }
+  }
+
+  .glide__bullet--active {
+    background-color: #148E72 !important;
   }
 `;
