@@ -40,6 +40,7 @@ export const AdvantagesCardWrapper = styled.ul`
   justify-content: space-between;
   @media (max-width: ${variables.desktopMin}) {
     flex-wrap: wrap;
+    justify-content: center;
   };
 `;
 
@@ -66,7 +67,9 @@ export const AdvantagesCardBox = styled.li`
 
 export const AdvantagesCardTextWrap=styled.div`
   text-align: center;
-  padding-bottom: 20%;
+  height: 135px;
+  padding: 0 20px;
+  max-height: 100%;
 `;
 
 export const AdvantagesIconWrap = styled.div`
@@ -81,11 +84,9 @@ export const AdvantagesIconWrap = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-
 `;
 
 export const AdvantagesCadTitle = styled.h3`
-  font-weight: 500;
   font-size: 22px;
   padding-bottom: 6px;
   text-align: center;

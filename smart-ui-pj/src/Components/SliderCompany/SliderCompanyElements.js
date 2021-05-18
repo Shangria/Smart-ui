@@ -8,7 +8,7 @@ export const SliderWrap = styled.section`
 `;
 
 export const SliderContent = styled.div`
-  max-width: 1310px;
+  max-width: 995px;
   width: 100%;
   overflow: hidden;
 `;
