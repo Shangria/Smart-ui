@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {CgFormatJustify} from 'react-icons/cg';
 import Logo from "./Logo";
 import {
@@ -15,10 +15,24 @@ import {
 
 
 const Header = ({toggle}) => {
+    const [opacityNav, setOpacityNav] = useState(false);
+
+    const opacityChange = () => {
+        if (window.scrollY >0) {
+            setOpacityNav(true);
+        } else {
+            setOpacityNav(false)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', opacityChange)
+    }, []);
+
     return (
-        <NavHeader>
+        <NavHeader opacityNav={opacityNav}>
             <NavbarContainer>
-                <NavLogoContainer to='\'>
+                <NavLogoContainer to='home'>
                     <Logo/>
                 </NavLogoContainer>
                 <MobileIcon onClick={toggle}>

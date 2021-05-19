@@ -34,7 +34,7 @@ export const SidebarWrapper = styled.nav`
   color: ${variables.menuColor};
   width: 100%;
   position: relative;
-  top: 80px;
+  top: 0px;
   height: 100%;
 `;
 

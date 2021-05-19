@@ -4,7 +4,8 @@ import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 
 export const NavHeader = styled.header`
-//  margin-top: -80px;
+  opacity: ${({opacityNav})=>(opacityNav? '0':'1')} ;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,6 +86,7 @@ export const NavBtnLink = styled(LinkScroll)`
   background-color: ${variables.btColor};
   border-radius: 3px;
   transition: .3s background;
+  border: 1px solid #000000;
 
   &:hover {
     background: ${variables.accentColor};
