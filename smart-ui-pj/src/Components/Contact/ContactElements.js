@@ -7,7 +7,7 @@ export const ContactWrapper = styled.section`
   background-image: url(${contactData.bg3}), url(${contactData.bg2}), url(${contactData.bg1});
   background-repeat: no-repeat;
   background-position: 95% 180%, 100% 0, 100% 0;
-  background-size: 140% 90%,cover,cover;
+  background-size: 140% 90%, cover, cover;
   display: flex;
   justify-content: center;
   mix-blend-mode: multiply;
@@ -57,7 +57,7 @@ export const ContactAddressContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  
+
   @media (min-width: ${variables.desktopMin}) {
     flex-direction: row;
     justify-content: space-around;
@@ -66,7 +66,7 @@ export const ContactAddressContainer = styled.div`
     width: 65%;
     flex-direction: column;
   }
-  
+
 `;
 export const ContactSubTitle = styled.h4`
   color: ${variables.accentColor};
@@ -148,7 +148,7 @@ export const ContactFormData = styled.div`
   display: flex;
   flex-direction: column;
   @media (min-width: ${variables.desktopMin}) {
-   flex-direction: row;
+    flex-direction: row;
   }
 
 `;
@@ -160,7 +160,7 @@ export const ContactFormDataInput = styled.input`
   width: 100%;
   margin: 5px 0 10px;
   font-size: 16px;
-  
+
   @media (min-width: ${variables.mobileMax}) {
     margin: 15px 0 25px;
     padding: 15px;
@@ -186,6 +186,7 @@ export const ContactFormMessage = styled.textarea`
   }
 `;
 export const ContactFormLabel = styled.label`
+  position: relative;
   color: ${variables.secondFontColor};
   font-size: 14px;
   width: 100%;
@@ -196,7 +197,33 @@ export const ContactFormLabel = styled.label`
   }
 `;
 
+export const ContactFormError = styled.p`
+  background-color: ${variables.mainBg};
+  color: ${variables.accentColor};
+  position: absolute;
+  top: -15px;
+  left: 0;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 180px;
+  box-shadow: 4px 4px 10px rgb(170 170 170 / 80%);
+  
+    :before {
+    border-top: 7px solid rgba(255, 255, 255, 0.85);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    bottom: -5px;
+    content: '';
+    display: block;
+    left: 20%;
+    margin-left: -7px;
+    position: absolute;
+  }
 
+  @media (min-width: ${variables.mobileMax}) {
+    top: 0;
+`;
 
 
 

@@ -8,6 +8,7 @@ import {
     ContactFormDataInput,
     ContactFormMessage,
     ContactFormLabel,
+    ContactFormError,
 } from "./ContactElements";
 
 
@@ -37,7 +38,7 @@ const ContactForm = () => {
                                           name="name"
                                           {...register('name', {required: true,})}
                     />
-                    {errors.name && <p>enter the name</p>}
+                    {errors.name && <ContactFormError>{formData.errorName}</ContactFormError>}
                 </ContactFormLabel>
                 <ContactFormLabel>
                     {formData.email}
@@ -46,7 +47,7 @@ const ContactForm = () => {
                                           name="email"
                                           {...register('email', {required: true, pattern: /@/})}
                     />
-                    {errors.email && <p>enter the email</p>}
+                    {errors.email && <ContactFormError>{formData.errorEmail}</ContactFormError>}
                 </ContactFormLabel>
             </ContactFormData>
             <ContactFormLabel>{formData.textarea}
@@ -55,7 +56,8 @@ const ContactForm = () => {
                                     {...register('message', {required: true,})}
                 >
                 </ContactFormMessage>
-                {errors.message && <p>enter the message</p>}
+
+                {errors.message && <ContactFormError>{formData.errorMessage}</ContactFormError>}
             </ContactFormLabel>
             <ButtonSend
                 type="submit"
