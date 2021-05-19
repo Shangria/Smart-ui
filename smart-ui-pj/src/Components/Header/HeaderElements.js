@@ -79,7 +79,7 @@ export const NavBtn = styled.div`
   }
 `;
 
-export const NavBtnLink = styled(LinkR)`
+export const NavBtnLink = styled(LinkScroll)`
   padding: 12px 18px;
   color: ${variables.mainBg};
   background-color: ${variables.btColor};

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 import {CgClose} from 'react-icons/cg';
 import {variables} from "../../Variables";
@@ -70,7 +69,7 @@ export const SideBtnWrap = styled.div`
   top: 80px;
 `;
 
-export const SidebarBtn = styled(LinkR)`
+export const SidebarBtn = styled(LinkScroll)`
   padding: 12px 18px;
   color: ${variables.mainBg};
   background-color: ${variables.btColor};

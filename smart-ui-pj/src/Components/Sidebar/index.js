@@ -34,7 +34,7 @@ const Sidebar = ({isOpen, toggle}) => {
                     </SidebarLinkWrap>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarBtn to='ContactUs' onClick={toggle}>Contact us</SidebarBtn>
+                    <SidebarBtn to='contactUs' onClick={toggle}>Contact us</SidebarBtn>
                 </SideBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>

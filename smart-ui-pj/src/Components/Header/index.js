@@ -47,7 +47,7 @@ const Header = ({toggle}) => {
                     </NavItem>
                     <NavItem>
                         <NavBtn>
-                            <NavBtnLink to='ContactUs'>
+                            <NavBtnLink to='contactUs'>
                                 Contact us
                             </NavBtnLink>
                         </NavBtn>
