@@ -14,6 +14,7 @@ import {
     ContactFormWrapper,
     ContactFormTitle,
     ContactBox,
+    ContactAddressBox,
 
 } from "./ContactElements";
 import {contactData} from "./ContactData";
@@ -26,11 +27,13 @@ const Contact = () => {
                 <ContactTitle>Contact</ContactTitle>
                 <ContactContent>
                     <ContactAddressContainer>
-                        <ContactSubTitle>Our address</ContactSubTitle>
-                        <ContactInfoAddress>{contactData.contactInfoCity}</ContactInfoAddress>
-                        <ContactInfoAddress>{contactData.contactInfoAve}</ContactInfoAddress>
-                        <ContactInfoAddress>{contactData.contactInfoWD}</ContactInfoAddress>
-                        <ContactInfoAddress>{contactData.contactInfoWeekend}</ContactInfoAddress>
+                        <ContactAddressBox>
+                            <ContactSubTitle>Our address</ContactSubTitle>
+                            <ContactInfoAddress>{contactData.contactInfoCity}</ContactInfoAddress>
+                            <ContactInfoAddress>{contactData.contactInfoAve}</ContactInfoAddress>
+                            <ContactInfoAddress>{contactData.contactInfoWD}</ContactInfoAddress>
+                            <ContactInfoAddress>{contactData.contactInfoWeekend}</ContactInfoAddress>
+                        </ContactAddressBox>
                         <ContactLinksWrap>
                             <ContactLinks>
                                 <ContactIcon src={contactData.upWorkLogo} alt={contactData.altUpWork}></ContactIcon>

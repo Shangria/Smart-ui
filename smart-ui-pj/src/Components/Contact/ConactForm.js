@@ -60,7 +60,7 @@ const ContactForm = () => {
             <ButtonSend
                 type="submit"
                 primarybg='true'
-                padding="28px 30px"
+                padding="1rem"
                 primarycolor='false'
             >{formData.btn}</ButtonSend>
         </ContactFormContent>

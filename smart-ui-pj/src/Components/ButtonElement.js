@@ -24,6 +24,8 @@ export const Button = styled(Link)`
 `;
 
 export const ButtonSend = styled.button`
+  margin-left: auto;
+  display: block;
   font-size: 22px;
   border: 1px solid #fff;
   padding: ${prop => prop.padding};

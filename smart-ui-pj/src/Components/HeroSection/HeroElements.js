@@ -7,12 +7,10 @@ export const HeroContainer = styled.section`
   background-repeat: no-repeat;
   background-position: 100% 0, 100% 0, 0 100%;
   background-size: 50%,50%,160px;
-  mix-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: start;
   margin-top: -120px;
-  height: 100%;
   padding-bottom: 20%;
 
   @media (max-width: ${variables.desktopMin}) {
