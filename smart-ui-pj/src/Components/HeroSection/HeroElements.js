@@ -5,16 +5,15 @@ import {heroData} from './HeroData';
 export const HeroContainer = styled.section`
   background-image: url(${heroData.bg2}), url(${heroData.bg1}), url(${heroData.bg3});
   background-repeat: no-repeat;
-  background-position: 120% 0,100% 0,0 100%;
-  background-size: 55%,50%,160px;
+  background-position: 100% 92px, 100% 0, 0 80%;
+  background-size: 55%, 50%, 160px;
   display: flex;
   justify-content: center;
   align-items: start;
   margin-top: -120px;
-  padding-bottom: 20%;
 
   @media (max-width: ${variables.desktopMin}) {
-    background-size: 80%, 50%,0%;
+    background-size: 80%, 50%, 0%;
   }
 `;
 
@@ -24,6 +23,7 @@ export const HeroContent = styled.div`
   max-width: 1310px;
   width: 100%;
   padding: 65px 15px 0;
+  padding-bottom: 30%;
   @media (max-width: ${variables.desktopMin}) {
     flex-direction: column;
   }
@@ -31,19 +31,16 @@ export const HeroContent = styled.div`
 
 
 export const HeroTitleContainer = styled.div`
-  transform: translate(0, 50%);
+  transform: translate(0, 30%);
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
   mix-blend-mode: multiply;
-  position: relative;
-  top: -65px;
-
-
+  
   @media (max-width: ${variables.desktopMin}) {
     transform: none;
     top: 80px;
-    padding: 70px 15px 10px;
+    padding: 15px;
   };
 `;
 
@@ -99,7 +96,7 @@ export const HeroSocialMedia = styled.div`
 export const HeroSocialLink = styled.a`
   display: flex;
   padding-right: 80px;
-  
+
   @media (max-width: ${variables.mobileMin}) {
     padding-bottom: 20px;
   };
@@ -112,9 +109,9 @@ export const HeroSocialMediaText = styled.p`
 export const HeroSocialIcons = styled.div`
   display: flex;
   padding-left: 20px;
-  
+
   @media (max-width: ${variables.mobileMin}) {
-   flex-direction: column;
+    flex-direction: column;
   };
 `;
 
@@ -125,32 +122,29 @@ export const HeroSocialName = styled.p`
 
 
 export const HeroImagesContainer = styled.div`
-  display: flex;
-  padding-top: 190px;
-  
+
   @media (max-width: ${variables.desktopMin}) {
-    padding-top: 90px;
-    padding-left: 50px;
-    flex-flow: row-reverse;
+    display: flex;
   };
 
 `;
 export const HeroImgWrapUp = styled.div`
-  position: relative;
-  bottom: -243px;
-  right: -310px;
+  position: absolute;
+  top: 70px;
+  right: 145px;
+
 
   @media (max-width: ${variables.desktopMin}) {
-    position: relative;
+    position: absolute;
     bottom: -10px;
     left: -100px;
   };
 `;
 export const HeroImgWrapDown = styled.div`
-  position: relative;
-  top: -65px;
-  right: 90px;
-  
+  position: absolute;
+  top: 396px;
+  right: 180px;
+
   @media (max-width: ${variables.desktopMin}) {
     position: static;
   };

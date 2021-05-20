@@ -10,8 +10,8 @@ export const heroData = {
     bg1: Bg1,
     bg2: Bg2,
     bg3: Bg3,
-    phone1: Phone1,
-    phone2: Phone2,
+    phone1: Phone2,
+    phone2: Phone1,
     upWork: UpWork,
     linkedIn: LinkedIn,
 };
