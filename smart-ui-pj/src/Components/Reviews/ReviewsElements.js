@@ -38,6 +38,6 @@ export const ReviewsText = styled.p`
 `;
 
 export const ReviewsSliderContainer = styled.div`
-  display: flex;
   padding: 5% 0;
+  overflow: hidden;
 `;

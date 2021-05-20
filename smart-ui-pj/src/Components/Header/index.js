@@ -29,8 +29,14 @@ const Header = ({toggle}) => {
         }
     };
 
+
     useEffect(() => {
+
         window.addEventListener('scroll', opacityChange)
+
+        // return (
+        //     window.removeEventListener('scroll', opacityChange)
+        // )
     }, []);
 
     return (
@@ -45,18 +51,33 @@ const Header = ({toggle}) => {
                 <NavMenu>
                     <NavItem>
                         <NavLinks to='home'
+                                  spy={true}
+                                  smooth={true}
+                                  duration={200}
+                                  exact='true'
+                                  offset={-80}
                         >
                             Home
                         </NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to='whatWeDo'
+                                  spy={true}
+                                  smooth={true}
+                                  duration={200}
+                                  exact='true'
+                                  offset={-80}
                         >
                             What we do
                         </NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to='ourAdvantages'
+                                  spy={true}
+                                  smooth={true}
+                                  exact='true'
+                                  offset={-80}
+                                  duration={200}
                         >
                             Our advantages
                         </NavLinks>

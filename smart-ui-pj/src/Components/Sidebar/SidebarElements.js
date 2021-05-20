@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Link as LinkScroll} from 'react-scroll';
+import {Link as LinkR} from 'react-router-dom';
 import {CgClose} from 'react-icons/cg';
 import {variables} from "../../Variables";
 
@@ -60,6 +61,10 @@ export const SidebarLink = styled(LinkScroll)`
     color: ${variables.accentColor};
     transition: .2s ease-in-out;
   }
+`;
+
+export const SidebarLinkToPortfolio=styled(LinkR)`
+  color: ${variables.menuColor};
 `;
 
 export const SideBtnWrap = styled.div`

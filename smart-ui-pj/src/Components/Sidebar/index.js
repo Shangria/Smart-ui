@@ -9,6 +9,7 @@ import {
     SidebarLink,
     SidebarBtn,
     SidebarMenu,
+    SidebarLinkToPortfolio,
 } from "./SidebarElements";
 
 const Sidebar = ({isOpen, toggle}) => {
@@ -30,7 +31,7 @@ const Sidebar = ({isOpen, toggle}) => {
                         <SidebarLink to='ourAdvantages' onClick={toggle}>Our advantages</SidebarLink>
                     </SidebarLinkWrap>
                     <SidebarLinkWrap>
-                        <SidebarLink to='portfolio' onClick={toggle}>Portfolio</SidebarLink>
+                        <SidebarLinkToPortfolio to='/portfolio' onClick={toggle}>Portfolio</SidebarLinkToPortfolio>
                     </SidebarLinkWrap>
                 </SidebarMenu>
                 <SideBtnWrap>

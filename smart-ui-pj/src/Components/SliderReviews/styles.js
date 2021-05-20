@@ -2,7 +2,6 @@ import {variables} from "../../Variables";
 
 export const glideReviews = {
     maxWidth: "100%",
-    overflow: "hidden",
     backgroundColor: variables.secondBg,
 
 };
@@ -12,10 +11,9 @@ export const glideSlides = {
 
 export const glideBullets = {
     position: "absolute",
-    maxWidth: "1310px",
-    width: "100%",
     display: "flex",
     justifyContent: "center",
+    width: "95%",
 };
 export const glideBullet = {
     backgroundColor: variables.accentColor,

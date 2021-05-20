@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import Glide from '@glidejs/glide';
-import {reviewsSliders} from "../SliderReviews/SliderReviewsData";
+import {reviewsSliders} from "./SliderReviewsData";
 import {SlideReview} from "./SlideReviews";
 import {
     glideReviews,
@@ -14,8 +14,7 @@ const ReviewsSlider = () => {
 
     useEffect(() => {
         new Glide('.glide-reviews', {
-            type: 'slider',
-            autoplay:2000,
+            type: 'carousel',
             startAt: 0,
             perView: 1,
         }).mount();
