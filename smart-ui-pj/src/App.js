@@ -1,11 +1,17 @@
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "../src/pages";
+import Portfolio from "./pages/portfolio";
 
 function App() {
     return (
+
         <Router>
-           <Home/>
+            <Switch>
+                <Route path='/home' component={Home} exact/>
+                <Route path='/portfolio' component={Portfolio} exact/>
+            </Switch>
         </Router>
+
     );
 }
 

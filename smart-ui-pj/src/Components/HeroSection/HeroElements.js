@@ -5,8 +5,8 @@ import {heroData} from './HeroData';
 export const HeroContainer = styled.section`
   background-image: url(${heroData.bg2}), url(${heroData.bg1}), url(${heroData.bg3});
   background-repeat: no-repeat;
-  background-position: 100% 0, 100% 0, 0 100%;
-  background-size: 50%,50%,160px;
+  background-position: 120% 0,100% 0,0 100%;
+  background-size: 55%,50%,160px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -37,14 +37,13 @@ export const HeroTitleContainer = styled.div`
   flex-basis: 50%;
   mix-blend-mode: multiply;
   position: relative;
-  top: -155px;
+  top: -65px;
 
 
   @media (max-width: ${variables.desktopMin}) {
     transform: none;
     top: 80px;
-    align-self: end;
-    padding: 15px;
+    padding: 70px 15px 10px;
   };
 `;
 
@@ -127,7 +126,7 @@ export const HeroSocialName = styled.p`
 
 export const HeroImagesContainer = styled.div`
   display: flex;
-  padding-top: 85px;
+  padding-top: 190px;
   
   @media (max-width: ${variables.desktopMin}) {
     padding-top: 90px;

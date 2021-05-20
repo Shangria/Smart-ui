@@ -9,19 +9,23 @@ import {
     NavBtn,
     NavMenu,
     NavLinks,
+    NavLinkToPortfolio,
     NavItem,
     MobileIcon,
 } from "./HeaderElements";
 
 
 const Header = ({toggle}) => {
-    const [opacityNav, setOpacityNav] = useState(false);
+    const [scrollNav, setScrollNav] = useState(false);
 
     const opacityChange = () => {
-        if (window.scrollY >0) {
-            setOpacityNav(true);
+        let scrollPos = 0;
+        let n = window.scrollY;
+
+        if (n > scrollPos) {
+            setScrollNav(true);
         } else {
-            setOpacityNav(false)
+            setScrollNav(false);
         }
     };
 
@@ -30,7 +34,7 @@ const Header = ({toggle}) => {
     }, []);
 
     return (
-        <NavHeader opacityNav={opacityNav}>
+        <NavHeader scrollNav={scrollNav}>
             <NavbarContainer>
                 <NavLogoContainer to='home'>
                     <Logo/>
@@ -40,24 +44,28 @@ const Header = ({toggle}) => {
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to='home'>
+                        <NavLinks to='home'
+                        >
                             Home
                         </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='whatWeDo'>
+                        <NavLinks to='whatWeDo'
+                        >
                             What we do
                         </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='ourAdvantages'>
+                        <NavLinks to='ourAdvantages'
+                        >
                             Our advantages
                         </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='portfolio'>
+                        <NavLinkToPortfolio to='/portfolio'
+                        >
                             Portfolio
-                        </NavLinks>
+                        </NavLinkToPortfolio>
                     </NavItem>
                     <NavItem>
                         <NavBtn>

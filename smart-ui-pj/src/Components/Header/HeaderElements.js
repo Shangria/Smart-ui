@@ -4,7 +4,7 @@ import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 
 export const NavHeader = styled.header`
-  opacity: ${({opacityNav})=>(opacityNav? '0':'1')} ;
+  background-color:  ${({scrollNav})=>(scrollNav? 'white':'transparent')} ;
   margin-top: -80px;
   display: flex;
   justify-content: center;
@@ -14,16 +14,16 @@ export const NavHeader = styled.header`
   line-height: 24px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1;
+  transition: background-color ease-out .5s;
 `;
 
 export const NavbarContainer = styled.nav`
   display: flex;
-  z-index: 1;
   width: 100%;
   max-width: 1310px;
   justify-content: space-between;
-  padding: 30px 15px 0 ;
+  padding: 20px 15px 0 ;
 `;
 
 export const NavLogoContainer = styled(LinkR)`
@@ -58,18 +58,19 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   color: ${variables.menuColor};
+  padding: 0 25px;
 `;
 
 export const NavLinks = styled(LinkScroll)`
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding-left: 50px;
   cursor: pointer;
 
   &.active {
     border-bottom: 3px solid ${variables.accentColor};
   }
+`;
+
+export const NavLinkToPortfolio=styled(LinkR)`
+  cursor: pointer;
 `;
 
 export const NavBtn = styled.div`

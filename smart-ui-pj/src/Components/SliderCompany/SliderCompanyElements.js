@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SliderWrap = styled.section`
  display: flex;
   justify-content: center;
-  padding: 0 15px;
+  padding: 30px 15px;
  
 `;
 
