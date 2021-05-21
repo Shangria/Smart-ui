@@ -3,6 +3,8 @@ import {variables} from "../../Variables";
 export const glideReviews = {
     maxWidth: "100%",
     backgroundColor: variables.secondBg,
+    position: "relative",
+    padding: "10px 0",
 
 };
 export const glideSlides = {
@@ -13,7 +15,7 @@ export const glideBullets = {
     position: "absolute",
     display: "flex",
     justifyContent: "center",
-    width: "95%",
+    width: "100%",
 };
 export const glideBullet = {
     backgroundColor: variables.accentColor,
