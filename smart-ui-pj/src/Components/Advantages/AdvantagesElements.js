@@ -67,9 +67,7 @@ export const AdvantagesCardBox = styled.li`
 
 export const AdvantagesCardTextWrap=styled.div`
   text-align: center;
-  min-height: 135px;
   padding: 0 20px;
-  max-height: 100%;
 `;
 
 export const AdvantagesIconWrap = styled.div`

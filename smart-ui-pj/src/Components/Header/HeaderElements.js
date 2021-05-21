@@ -73,14 +73,6 @@ export const NavLinkToPortfolio=styled(LinkR)`
   cursor: pointer;
 `;
 
-export const NavBtn = styled.div`
-  padding-left: 50px;
-
-  @media screen and (max-width: ${variables.tabletMin}) {
-    display: none;
-  }
-`;
-
 export const NavBtnLink = styled(LinkScroll)`
   padding: 12px 18px;
   color: ${variables.mainBg};

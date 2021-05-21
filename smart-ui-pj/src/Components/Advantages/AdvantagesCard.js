@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button} from '../ButtonElement';
+import {ButtonSend} from '../ButtonElement';
 import {
     AdvantagesCadTitle,
     AdvantagesCardBox,
@@ -10,12 +10,12 @@ import {
 
 
 const AdvantagesCard = ({
-                       logo,
+                            logo,
                             cardTitle,
                             cardText,
                             btn,
                             altAdvantages,
-                   }) => {
+                        }) => {
 
     const [hover, setHover] = useState(false);
 
@@ -25,22 +25,24 @@ const AdvantagesCard = ({
 
     return (
         <AdvantagesCardBox onMouseEnter={() => setHover(true)}
-                      onMouseLeave={() => setHover(false)}
-                      hover={hover}
+                           onMouseLeave={() => setHover(false)}
+                           hover={hover}
         >
             <AdvantagesIconWrap hover={hover}>
-               <img style={{ height: "100%"}}
-                   src={logo} alt={altAdvantages}/>
+                <img style={{height: "100%"}}
+                     src={logo} alt={altAdvantages}/>
             </AdvantagesIconWrap>
             <AdvantagesCardTextWrap>
                 <AdvantagesCadTitle>{cardTitle}</AdvantagesCadTitle>
                 {
-                    hover ? <Button to="#"
+                    hover ? <ButtonSend
+                            type="submit"
+                            to="#"
                             padding='20px 60px'
                             primarybg='true'
                             primarycolor='true'
-                        >{btn}</Button>
-                    :
+                        >{btn}</ButtonSend>
+                        :
                         <AdvantagesCardText>{cardText}</AdvantagesCardText>
                 }
             </AdvantagesCardTextWrap>

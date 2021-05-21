@@ -42,7 +42,7 @@ const Header = ({toggle}) => {
     return (
         <NavHeader scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogoContainer to='home'>
+                <NavLogoContainer to='/home'>
                     <Logo/>
                 </NavLogoContainer>
                 <MobileIcon onClick={toggle}>
@@ -89,11 +89,9 @@ const Header = ({toggle}) => {
                         </NavLinkToPortfolio>
                     </NavItem>
                     <NavItem>
-                        <NavBtn>
                             <NavBtnLink to='contactUs'>
                                 Contact us
                             </NavBtnLink>
-                        </NavBtn>
                     </NavItem>
                 </NavMenu>
             </NavbarContainer>

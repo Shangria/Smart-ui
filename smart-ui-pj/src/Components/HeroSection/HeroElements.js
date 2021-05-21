@@ -80,6 +80,7 @@ export const HeroSubTitle = styled.p`
 
 export const HeroBtnWrapper = styled.div`
   padding-bottom: 30px;
+  align-self: flex-start;
   @media (max-width: ${variables.tabletMin}) {
     padding-bottom: 80px;
   };
