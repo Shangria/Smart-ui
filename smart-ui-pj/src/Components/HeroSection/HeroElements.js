@@ -26,6 +26,7 @@ export const HeroContent = styled.div`
   padding-bottom: 30%;
   @media (max-width: ${variables.desktopMin}) {
     flex-direction: column;
+    padding: 220px 15px 0;
   }
 `;
 
@@ -36,7 +37,10 @@ export const HeroTitleContainer = styled.div`
   flex-direction: column;
   flex-basis: 50%;
   mix-blend-mode: multiply;
-  
+  @media (max-width: ${variables.wideScreenMin}) {
+    flex-basis: 45%;
+  };
+
   @media (max-width: ${variables.desktopMin}) {
     transform: none;
     top: 80px;
@@ -122,31 +126,26 @@ export const HeroSocialName = styled.p`
 
 
 export const HeroImagesContainer = styled.div`
-
   @media (max-width: ${variables.desktopMin}) {
     display: flex;
+    flex-direction: row;
   };
 
 `;
 export const HeroImgWrapUp = styled.div`
-  position: absolute;
-  top: 70px;
-  right: 145px;
-
-
-  @media (max-width: ${variables.desktopMin}) {
+  @media (min-width: ${variables.desktopMin}) {
     position: absolute;
-    bottom: -10px;
-    left: -100px;
+    top: 70px;
+    right: 145px;
   };
 `;
 export const HeroImgWrapDown = styled.div`
-  position: absolute;
-  top: 396px;
-  right: 180px;
 
-  @media (max-width: ${variables.desktopMin}) {
-    position: static;
+
+  @media (min-width: ${variables.desktopMin}) {
+    position: absolute;
+    top: 396px;
+    right: 180px;
   };
 `;
 
