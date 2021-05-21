@@ -29,7 +29,10 @@ const ContactForm = () => {
     const message = watch('message');
 
     return (
-        <ContactFormContent onSubmit={handleSubmit(onSubmit)}>
+        <ContactFormContent
+            action="/action_page.php"
+            onSubmit={handleSubmit(onSubmit)}
+        >
             <ContactFormData>
                 <ContactFormLabel>
                     {formData.name}
@@ -56,7 +59,6 @@ const ContactForm = () => {
                                     {...register('message', {required: true,})}
                 >
                 </ContactFormMessage>
-
                 {errors.message && <ContactFormError>{formData.errorMessage}</ContactFormError>}
             </ContactFormLabel>
             <ButtonSend
