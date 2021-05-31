@@ -137,6 +137,8 @@ export const ContactFormTitle = styled.h3`
 `;
 
 export const ContactFormContent = styled.form`
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0 auto;
   @media (min-width: ${variables.mobileMax}) {

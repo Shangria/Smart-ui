@@ -6,6 +6,7 @@ import {
     AdvantagesCardText,
     AdvantagesCardTextWrap,
     AdvantagesIconWrap,
+    ButtonWrap,
 } from "./AdvantagesElements";
 
 
@@ -35,15 +36,21 @@ const AdvantagesCard = ({
             <AdvantagesCardTextWrap>
                 <AdvantagesCadTitle>{cardTitle}</AdvantagesCadTitle>
                 {
-                    hover ? <ButtonSend
-                            type="submit"
-                            to="#"
-                            padding='20px 60px'
-                            primarybg='true'
-                            primarycolor='true'
-                        >{btn}</ButtonSend>
+                    hover ? <ButtonWrap>
+                            <ButtonSend
+                                type="submit"
+                                to="#"
+                                padding='20px 60px'
+                                primarybg='true'
+                                primarycolor='true'
+                            >{btn}</ButtonSend>
+                        </ButtonWrap>
+
                         :
-                        <AdvantagesCardText>{cardText}</AdvantagesCardText>
+                        <ButtonWrap>
+                            <AdvantagesCardText>{cardText}</AdvantagesCardText>
+                        </ButtonWrap>
+
                 }
             </AdvantagesCardTextWrap>
         </AdvantagesCardBox>

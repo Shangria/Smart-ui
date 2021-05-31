@@ -24,7 +24,7 @@ export const Button = styled(Link)`
 `;
 
 export const ButtonSend = styled.button`
-  margin-left: auto;
+  align-self: flex-end;
   display: block;
   font-size: 22px;
   border: 1px solid #fff;

@@ -18,6 +18,8 @@ export const AdvantagesTextWrap = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const AdvantagesTitle = styled.h3`
@@ -58,14 +60,14 @@ export const AdvantagesCardBox = styled.li`
 
   @media (max-width: ${variables.desktopMin}) {
     width: 45%;
-    padding-bottom: 10%;
+    padding-bottom: 12%;
   };
   @media (max-width: ${variables.mobileMax}) {
     width: 100%;
   };
 `;
 
-export const AdvantagesCardTextWrap=styled.div`
+export const AdvantagesCardTextWrap = styled.div`
   text-align: center;
   padding: 0 20px;
 `;
@@ -94,5 +96,12 @@ export const AdvantagesCardText = styled.p`
   @media (max-width: ${variables.desktopMin}) {
     text-align: center;
   };
+`;
+
+export const ButtonWrap = styled.div`
+  height: 100px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
