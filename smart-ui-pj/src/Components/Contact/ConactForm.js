@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useForm} from "react-hook-form";
+import axios from 'axios';
 import {formData} from "./ContactFormData";
 import {ButtonSend} from '../ButtonElement';
 import {
@@ -20,13 +21,21 @@ const ContactForm = () => {
     } = useForm();
 
     const onSubmit = data => {
-        console.log("Send", data);
-    }
+        const url='https://reqres.in/api/users';
+
+        axios.post(url, data)
+            .then(response => {
+                console.log("Status: ", response.status);
+                console.log("Data: ", response.data);
+            }).catch(error => {
+            console.error('Something went wrong!', error);
+        });
+    };
 
 
     return (
         <ContactFormContent
-            action="/action_page.php"
+            // action="/action_page.php"
             onSubmit={handleSubmit(onSubmit)}
         >
             <ContactFormData>
