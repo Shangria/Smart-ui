@@ -18,25 +18,25 @@ const AdvantagesCard = ({
                             altAdvantages,
                         }) => {
 
-    const [hover, setHover] = useState(false);
+    const [advantagesHover, advantagesSetHover] = useState(false);
 
     useEffect(() => {
-        setHover(hover);
-    }, []);
+        advantagesSetHover(advantagesHover);
+    }, [advantagesHover]);
 
     return (
-        <AdvantagesCardBox onMouseEnter={() => setHover(true)}
-                           onMouseLeave={() => setHover(false)}
-                           hover={hover}
+        <AdvantagesCardBox onMouseEnter={() => advantagesSetHover(true)}
+                           onMouseLeave={() => advantagesSetHover(false)}
+                           hover={advantagesHover}
         >
-            <AdvantagesIconWrap hover={hover}>
+            <AdvantagesIconWrap hover={advantagesHover}>
                 <img style={{height: "100%"}}
                      src={logo} alt={altAdvantages}/>
             </AdvantagesIconWrap>
             <AdvantagesCardTextWrap>
                 <AdvantagesCadTitle>{cardTitle}</AdvantagesCadTitle>
                 {
-                    hover ? <ButtonWrap>
+                    advantagesHover ? <ButtonWrap>
                             <ButtonSend
                                 type="submit"
                                 to="#"

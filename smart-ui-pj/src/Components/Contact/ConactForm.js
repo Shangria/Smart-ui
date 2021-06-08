@@ -17,16 +17,12 @@ const ContactForm = () => {
         register,
         handleSubmit,
         formState: {errors},
-        watch,
     } = useForm();
 
     const onSubmit = data => {
         console.log("Send", data);
     }
 
-    const name = watch('name');
-    const email = watch('email');
-    const message = watch('message');
 
     return (
         <ContactFormContent

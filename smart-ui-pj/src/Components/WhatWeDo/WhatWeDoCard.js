@@ -14,18 +14,18 @@ const WhatWeDoCard = ({
                           altWhatWeDo,
                       }) => {
 
-    const [hover, setHover] = useState(false);
+    const [whatWeDoCardHover, WhatWeDoCardSetHover] = useState(false);
 
     useEffect(() => {
-        setHover(hover);
-    }, []);
+        WhatWeDoCardSetHover(whatWeDoCardHover);
+    }, [whatWeDoCardHover]);
 
     return (
-        <WhatWeDoCardBox onMouseEnter={() => setHover(true)}
-                         onMouseLeave={() => setHover(false)}
-                         hover={hover}>
-            <WhatWeDoCardIcon hover={hover}>
-                <img style={ hover ? {filter: "invert(40%) sepia(13%) saturate(3138%) hue-rotate(119deg) brightness(95%) contrast(123%)"} : {color:`${variables.accentColor}`}}
+        <WhatWeDoCardBox onMouseEnter={() => WhatWeDoCardSetHover(true)}
+                         onMouseLeave={() => WhatWeDoCardSetHover(false)}
+                         hover={whatWeDoCardHover}>
+            <WhatWeDoCardIcon hover={whatWeDoCardHover}>
+                <img style={ whatWeDoCardHover ? {filter: "invert(40%) sepia(13%) saturate(3138%) hue-rotate(119deg) brightness(95%) contrast(123%)"} : {color:`${variables.accentColor}`}}
                     src={icon} alt={altWhatWeDo}/>
             </WhatWeDoCardIcon>
             <WhatWeDoCardTitle>{cardTitle}</WhatWeDoCardTitle>

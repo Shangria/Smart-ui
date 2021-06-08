@@ -14,16 +14,16 @@ const ToolsCard = ({
                        alt
                    }) => {
 
-    const [hover, setHover] = useState(false);
+    const [ToolsCardHover, ToolsCardSetHover] = useState(false);
 
     useEffect(() => {
-        setHover(hover);
-    }, []);
+        ToolsCardSetHover(ToolsCardHover);
+    }, [ToolsCardHover]);
 
     return (
-        <ToolsCardBox onMouseEnter={() => setHover(true)}
-                      onMouseLeave={() => setHover(false)}
-                      hover={hover}
+        <ToolsCardBox onMouseEnter={() => ToolsCardSetHover(true)}
+                      onMouseLeave={() => ToolsCardSetHover(false)}
+                      hover={ToolsCardHover}
         >
             <ToolsIconWrap>
                 <img src={icon} alt={alt}/>

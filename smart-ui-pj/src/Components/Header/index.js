@@ -6,7 +6,6 @@ import {
     NavbarContainer,
     NavLogoContainer,
     NavBtnLink,
-    NavBtn,
     NavMenu,
     NavLinks,
     NavLinkToPortfolio,
