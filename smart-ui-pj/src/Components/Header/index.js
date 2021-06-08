@@ -41,7 +41,7 @@ const Header = ({toggle}) => {
     return (
         <NavHeader scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogoContainer to='/home'>
+                <NavLogoContainer to='home'>
                     <Logo/>
                 </NavLogoContainer>
                 <MobileIcon onClick={toggle}>

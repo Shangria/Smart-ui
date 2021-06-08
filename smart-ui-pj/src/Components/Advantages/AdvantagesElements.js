@@ -18,8 +18,6 @@ export const AdvantagesTextWrap = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const AdvantagesTitle = styled.h3`
