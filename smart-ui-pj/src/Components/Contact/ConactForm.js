@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {useForm} from "react-hook-form";
 import axios from 'axios';
 import {formData} from "./ContactFormData";
@@ -21,7 +21,8 @@ const ContactForm = () => {
     } = useForm();
 
     const onSubmit = data => {
-        const url='https://reqres.in/api/users';
+        const url='mail.php';
+        console.log(data)
 
         axios.post(url, data)
             .then(response => {
@@ -35,7 +36,8 @@ const ContactForm = () => {
 
     return (
         <ContactFormContent
-            // action="/action_page.php"
+            action="mail.php"
+            method="POST"
             onSubmit={handleSubmit(onSubmit)}
         >
             <ContactFormData>

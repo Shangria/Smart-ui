@@ -1,4 +1,5 @@
 <?php
+var_dump($_POST)
 $to = "neonchilkk@gmail.com";
 $subject ='Заказ консультации';
 $message .= "Заказ звонка с сайта \r\n";
