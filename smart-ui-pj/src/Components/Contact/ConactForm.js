@@ -14,6 +14,11 @@ import {
 
 
 const ContactForm = () => {
+
+    const reset=()=>{
+        document.forms[0].reset()
+    }
+
     const {
         register,
         handleSubmit,
@@ -70,6 +75,7 @@ const ContactForm = () => {
                 {errors.message && <ContactFormError>{formData.errorMessage}</ContactFormError>}
             </ContactFormLabel>
             <ButtonSend
+                onClick={reset}
                 type="submit"
                 primarybg='true'
                 padding="1rem"
