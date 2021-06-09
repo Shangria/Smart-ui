@@ -22,12 +22,13 @@ const ContactForm = () => {
 
     const onSubmit = data => {
         const url='mail.php';
-        const dataStr=JSON.stringify(data);
+
+        const dataStr=JSON.stringify(data).replace(/[\])}[{(]/g, '\n').replace(/,/g,",   ").replace(/"/g,"").replace(/,   /g,"\n");
+
 
         axios.post(url, dataStr)
             .then(response => {
                 console.log("Status: ", response.status);
-                console.log("Data: ", response.data);
             }).catch(error => {
             console.error('Something went wrong!', error);
         });
