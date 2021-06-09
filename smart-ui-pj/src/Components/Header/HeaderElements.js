@@ -26,7 +26,7 @@ export const NavbarContainer = styled.nav`
   padding: 20px 15px 0 ;
 `;
 
-export const NavLogoContainer = styled(LinkR)`
+export const NavLogoContainer = styled(LinkScroll)`
   cursor: pointer;
   
   @media screen and (max-width: ${variables.mobileMin}) {

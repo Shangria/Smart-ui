@@ -15,7 +15,7 @@ export const SidebarContainer = styled.div`
   left: 0;
   transition: .3s ease-in-out;
   opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
-  top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
+  bottom: ${({isOpen}) => (isOpen ? '0' : '170%')};
 `;
 
 export const CloseIcon = styled(CgClose)`
