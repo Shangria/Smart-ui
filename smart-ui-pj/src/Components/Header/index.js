@@ -82,7 +82,7 @@ const Header = ({toggle}) => {
                         </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinkToPortfolio to='/portfolio'
+                        <NavLinkToPortfolio to='#'
                         >
                             Portfolio
                         </NavLinkToPortfolio>

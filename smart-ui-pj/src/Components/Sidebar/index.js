@@ -31,7 +31,7 @@ const Sidebar = ({isOpen, toggle}) => {
                         <SidebarLink to='ourAdvantages' onClick={toggle}>Our advantages</SidebarLink>
                     </SidebarLinkWrap>
                     <SidebarLinkWrap>
-                        <SidebarLinkToPortfolio to='/portfolio' onClick={toggle}>Portfolio</SidebarLinkToPortfolio>
+                        <SidebarLinkToPortfolio to='#' onClick={toggle}>Portfolio</SidebarLinkToPortfolio>
                     </SidebarLinkWrap>
                 </SidebarMenu>
                 <SideBtnWrap>

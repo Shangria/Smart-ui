@@ -80,6 +80,7 @@ export const NavBtnLink = styled(LinkScroll)`
   border-radius: 3px;
   transition: .3s background;
   border: 1px solid #000000;
+  cursor: pointer;
 
   &:hover {
     background: ${variables.accentColor};
