@@ -3,12 +3,8 @@ import {Link as LinkScroll} from 'react-scroll';
 import {Link as LinkR} from 'react-router-dom';
 import {CgClose} from 'react-icons/cg';
 import {variables} from "../../Variables";
-import {heroData} from "../HeroSection/HeroData";
 
 export const SidebarContainer = styled.div`
-  background-image: url(${heroData.bg2});
-  background-repeat: no-repeat;
-  background-size: cover;
   position: fixed;
   z-index: 999;
   width: 100%;

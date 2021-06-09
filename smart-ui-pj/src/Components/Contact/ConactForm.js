@@ -22,9 +22,9 @@ const ContactForm = () => {
 
     const onSubmit = data => {
         const url='mail.php';
-        console.log(data)
+        const dataStr=JSON.stringify(data);
 
-        axios.post(url, data)
+        axios.post(url, dataStr)
             .then(response => {
                 console.log("Status: ", response.status);
                 console.log("Data: ", response.data);
