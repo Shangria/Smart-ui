@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import {variables} from "../../Variables";
 import {heroData} from './HeroData';
 
@@ -24,6 +24,7 @@ export const HeroContent = styled.div`
   width: 100%;
   padding: 65px 15px 0;
   padding-bottom: 30%;
+  z-index: 1;
   @media (max-width: ${variables.desktopMin}) {
     flex-direction: column;
     padding: 220px 15px 0;
@@ -100,10 +101,16 @@ export const HeroSocialMedia = styled.div`
 
 export const HeroSocialLink = styled.a`
   display: flex;
-  padding-right: 80px;
+  align-items: center;
+  margin-right: 30px;
+  padding: 10px 35px;
+  border-radius: 6px;
+  border: 1px solid #F2F2F2;
+  box-shadow: 4px 4px 10px rgba(170, 170, 170, 0.13);
+  background-color: #ffffff;
 
   @media (max-width: ${variables.mobileMin}) {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   };
 `;
 
@@ -113,7 +120,6 @@ export const HeroSocialMediaText = styled.p`
 
 export const HeroSocialIcons = styled.div`
   display: flex;
-  padding-left: 20px;
 
   @media (max-width: ${variables.mobileMin}) {
     flex-direction: column;
@@ -121,8 +127,11 @@ export const HeroSocialIcons = styled.div`
 `;
 
 export const HeroSocialName = styled.p`
+  margin-left: 12px;
   font-size: 16px;
-  padding-left: 15px;
+  @media (min-width: ${variables.wideScreenMin}) {
+    font-size: 22px;
+  };
 `;
 
 

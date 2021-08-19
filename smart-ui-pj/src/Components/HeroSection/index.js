@@ -1,5 +1,5 @@
 import React from "react";
-import {ButtonSend} from '../ButtonElement';
+import {Button} from '../ButtonElement';
 import {variables} from "../../Variables";
 import {
     HeroContainer,
@@ -36,15 +36,15 @@ const HeroSection = () => {
                     </HeroTitle>
                     <HeroSubTitle>You deserve easy IT, to make it easy{'\n'} make it SMART</HeroSubTitle>
                     <HeroBtnWrapper>
-                        <ButtonSend
-                            type='submit'
+                        <Button
                             to='findMore'
+                            href="#"
                             padding='25px 70px'
                             background={variables.accentColor}
                             backgroundhover={variables.mainBg}
                             colorhover={variables.accentColor}
                         >
-                            Find more</ButtonSend>
+                            Find more</Button>
                     </HeroBtnWrapper>
                     <HeroSocialMedia>
                         <HeroSocialMediaText>Our social media:</HeroSocialMediaText>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import {variables} from "../../Variables";
 import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
@@ -14,7 +14,7 @@ export const NavHeader = styled.header`
   line-height: 24px;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   transition: background-color ease-out .5s;
 `;
 
@@ -78,15 +78,13 @@ export const NavBtnLink = styled(LinkScroll)`
   color: ${variables.mainBg};
   background-color: ${variables.btColor};
   border-radius: 3px;
-  transition: .3s background;
-  border: 1px solid #000000;
+  transition: all .3s;
   cursor: pointer;
 
   &:hover {
     background: ${variables.accentColor};
     color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 4px 4px 10px rgb(170 170 170 / 80%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
 }
 `
