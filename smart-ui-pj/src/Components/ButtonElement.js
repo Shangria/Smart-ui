@@ -3,7 +3,7 @@ import {Link} from 'react-scroll';
 import {variables} from "../Variables";
 
 export const Button = styled(Link)`
-  font-size: 22px;
+  font-size: 1rem;
   padding: ${prop => prop.padding};
   color: ${({primarycolor}) => (primarycolor ? `${variables.accentColor}` : `${variables.mainBg}`)};
   background: ${({primarybg}) => (primarybg ? `${variables.mainBg}` : `${variables.accentColor}`)};
@@ -11,8 +11,8 @@ export const Button = styled(Link)`
   transition: .3s background;
   cursor: pointer;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  @media (max-width: ${variables.desktopMin}) {
-    font-size: 16px;
+  @media (min-width: ${variables.desktopMin}) {
+    font-size: 1.375rem
   };
 
   &:hover {

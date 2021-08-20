@@ -8,12 +8,9 @@ export const DefaultStyle = createGlobalStyle`
 
   body {
     font-family: ${variables.mainFont};
-    font-size: 14px;
+    font-size: ${variables.fontSize};
     font-weight: 400;
     color: ${variables.fontColor};
-    @media screen and(min-width: ${variables.tabletMin} ) {
-      font-size: 16px;
-    }
   }
 
   img {
@@ -28,9 +25,9 @@ export const DefaultStyle = createGlobalStyle`
 
   h3 {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     @media screen and(min-width: ${variables.mobileMin}) {
-      font-size: 22px;
+      font-size: 1.375rem;
     }
     @media screen and(min-width: ${variables.desktopMin}) {
       padding-bottom: 6px;

@@ -10,8 +10,8 @@ export const NavHeader = styled.header`
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
   position: sticky;
   top: 0;
   z-index: 2;

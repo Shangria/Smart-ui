@@ -6,132 +6,145 @@ export const HeroContainer = styled.section`
   background-image: url(${heroData.bg2}), url(${heroData.bg1}), url(${heroData.bg3});
   background-repeat: no-repeat;
   background-position: 100% 92px, 100% 0, 0 80%;
-  background-size: 55%, 50%, 160px;
+  background-size: 80%, 50%, 0%;
   display: flex;
   justify-content: center;
   align-items: start;
   margin-top: -120px;
 
-  @media (max-width: ${variables.desktopMin}) {
-    background-size: 80%, 50%, 0%;
+  @media (min-width: ${variables.desktopMin}) {
+    background-size: 55%, 50%, 160px;
+    padding-top: 120px;
+  }
+  @media (min-width: ${variables.wideScreenMax}) {
+    background-size: 42%, 50%, 160px;
   }
 `;
 
 export const HeroContent = styled.div`
+  padding: 220px 15px 0;
   display: flex;
-  flex-direction: row;
-  max-width: 1310px;
+  flex-direction: column;
+  max-width: ${variables.containerWidth};
   width: 100%;
-  padding: 65px 15px 0;
-  padding-bottom: 30%;
   z-index: 1;
-  @media (max-width: ${variables.desktopMin}) {
-    flex-direction: column;
-    padding: 220px 15px 0;
+
+  @media (min-width: ${variables.desktopMin}) {
+    padding: 65px 15px 250px;
+    flex-direction: row;
   }
 `;
 
 
 export const HeroTitleContainer = styled.div`
-  transform: translate(0, 30%);
-  display: flex;
-  flex-direction: column;
-  flex-basis: 50%;
-  mix-blend-mode: multiply;
-  @media (max-width: ${variables.wideScreenMin}) {
-    flex-basis: 45%;
-  };
+  padding: 15px;
+  flex-basis: 40%;
 
-  @media (max-width: ${variables.desktopMin}) {
-    transform: none;
-    top: 80px;
-    padding: 15px;
+  @media (min-width: ${variables.desktopMin}) {
+    transform: translate(0, 30%);
+    padding: 0;
+  };
+  @media (min-width: ${variables.wideScreenMin}) {
+    flex-basis: 50%;
   };
 `;
 
 export const HeroTitle = styled.h1`
   font-weight: 600;
-  font-size: 60px;
-  padding-bottom: 15px;
+  font-size: 2.25rem;
+  margin-bottom: 15px;
   line-height: 1.1;
 
-  @media (max-width: ${variables.desktopMin}) {
-    font-size: 55px;
+  @media (min-width: ${variables.tabletMin}) {
+    font-size: 3rem;
   };
-
-  @media (max-width: ${variables.tabletMin}) {
-    font-size: 38px;
+  @media (min-width: ${variables.desktopMin}) {
+    font-size: 3.75rem;
   };
 `;
 
 export const HeroTitleSmart = styled.span`
   color: ${variables.accentColor};
+  text-shadow: 0 0 5px black, 0 0 20px black;
+  
+  @media (min-width: ${variables.desktopMin}) {
+    text-shadow: none;
+  }
 `;
 
 export const HeroSubTitle = styled.p`
+  margin-bottom: 60px;
   max-width: 600px;
   font-weight: 500;
-  font-size: 36px;
-  padding-bottom: 60px;
+  font-size: 1.375rem;
 
-  @media (max-width: ${variables.desktopMin}) {
-    font-size: 22px;
+  @media (min-width: ${variables.desktopMin}) {
+    font-size: 2.25rem;
   }
 `;
 
 export const HeroBtnWrapper = styled.div`
-  padding-bottom: 30px;
-  align-self: flex-start;
-  @media (max-width: ${variables.tabletMin}) {
-    padding-bottom: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: ${variables.mobileMin}) {
+    margin-bottom: 40px;
+    text-align: left;
   };
-  @media (max-width: ${variables.mobileMin}) {
-    padding-bottom: 40px;
+  @media (min-width: ${variables.tabletMin}) {
+    margin-bottom: 80px;
   };
 `;
 
 export const HeroSocialMedia = styled.div`
+  margin-bottom: 30px;
+
+  @media (min-width: ${variables.desktopMin}) {
+    margin-bottom: 0;
+  }
+`;
+
+export const HeroSocialMediaText = styled.p`
+  margin-bottom: 15px;
+`;
+
+export const HeroSocialIcons = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  @media (max-width: ${variables.mobileMin}) {
-    padding-top: 0;
+
+  @media (min-width: ${variables.mobileMin}) {
+    flex-direction: row;
   };
 `;
 
 export const HeroSocialLink = styled.a`
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-bottom: 20px;
   padding: 10px 35px;
+  font-size: ${variables.fontSize};
   border-radius: 6px;
   border: 1px solid #F2F2F2;
   box-shadow: 4px 4px 10px rgba(170, 170, 170, 0.13);
+  color: ${props => props.upwork ? variables.accentColor : variables.fontColor};
   background-color: #ffffff;
+  transition: box-shadow .3s;
 
-  @media (max-width: ${variables.mobileMin}) {
-    margin-bottom: 20px;
+  @media (min-width: ${variables.mobileMin}) {
+    margin-bottom: 0;
+    margin-right: 30px;
   };
-`;
-
-export const HeroSocialMediaText = styled.p`
-  padding-bottom: 15px;
-`;
-
-export const HeroSocialIcons = styled.div`
-  display: flex;
-
-  @media (max-width: ${variables.mobileMin}) {
-    flex-direction: column;
-  };
-`;
-
-export const HeroSocialName = styled.p`
-  margin-left: 12px;
-  font-size: 16px;
   @media (min-width: ${variables.wideScreenMin}) {
-    font-size: 22px;
+    font-size: 1.375rem;
   };
+
+  &:hover {
+    box-shadow: 4px 4px 10px rgba(170, 170, 170, 0.73);
+  }
+`;
+
+export const HeroSocialImg = styled.img`
+  margin-right: 12px;
 `;
 
 
@@ -145,17 +158,15 @@ export const HeroImagesContainer = styled.div`
 export const HeroImgWrapUp = styled.div`
   @media (min-width: ${variables.desktopMin}) {
     position: absolute;
-    top: 70px;
-    right: 145px;
+    top: 80px;
+    right: 85px;
   };
 `;
 export const HeroImgWrapDown = styled.div`
-
-
   @media (min-width: ${variables.desktopMin}) {
     position: absolute;
-    top: 396px;
-    right: 180px;
+    top: 406px;
+    right: 130px;
   };
 `;
 
