@@ -12,6 +12,7 @@ import {
   NavItem,
   MobileIcon,
 } from "./HeaderElements";
+import { useLocation, useRouteMatch } from "react-router";
 
 const Header = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -29,22 +30,29 @@ const Header = ({ toggle }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", opacityChange);
-    // return (
-    //     window.removeEventListener('scroll', opacityChange)
-    // )
+    console.log('start');
+    return (
+      ()=>{
+          window.removeEventListener('scroll', opacityChange); 
+      }
+      
+    )
   }, []);
-
+  const itHomepage = useLocation().pathname=="/";
+ 
   return (
     <NavHeader scrollNav={scrollNav}>
       <NavbarContainer>
-        <NavLogoContainer to="home">
+        <NavLogoContainer to="/">
           <Logo />
         </NavLogoContainer>
         <MobileIcon onClick={toggle}>
           <CgFormatJustify />
         </MobileIcon>
         <NavMenu>
-          <NavItem>
+   
+          {itHomepage? <>
+            <NavItem>
             <NavLinks
               to="home"
               spy={true}
@@ -55,31 +63,35 @@ const Header = ({ toggle }) => {
             >
               Home
             </NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks
-              to="whatWeDo"
-              spy={true}
-              smooth={true}
-              duration={200}
-              exact="true"
-              offset={-80}
-            >
-              What we do
-            </NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks
-              to="ourAdvantages"
-              spy={true}
-              smooth={true}
-              exact="true"
-              offset={-80}
-              duration={200}
-            >
-              Our advantages
-            </NavLinks>
-          </NavItem>
+          </NavItem> 
+                    <NavItem>
+                    <NavLinks
+                      to="whatWeDo"
+                      spy={true}
+                      smooth={true}
+                      duration={200}
+                      exact="true"
+                      offset={-80}
+                    >
+                      What we do
+                    </NavLinks>
+                  </NavItem>     
+                  <NavItem>
+                  <NavLinks
+                  to="ourAdvantages"
+                  spy={true}
+                  smooth={true}
+                  exact="true"
+                  offset={-80}
+                  duration={200}
+                  >
+                  Our advantages
+                  </NavLinks>
+                  </NavItem>
+                      </> 
+                 :  <NavItem>
+                 <NavLinkToPortfolio to="/">Home</NavLinkToPortfolio>
+               </NavItem>} 
           <NavItem>
             <NavLinkToPortfolio to="portfolio">Portfolio</NavLinkToPortfolio>
           </NavItem>

@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import {variables} from "../../Variables";
-import {Link as LinkR} from 'react-router-dom';
+import {Link, Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 
 export const NavHeader = styled.header`
@@ -26,7 +26,7 @@ export const NavbarContainer = styled.nav`
   padding: 20px 15px 0 ;
 `;
 
-export const NavLogoContainer = styled(LinkScroll)`
+export const NavLogoContainer = styled(Link)`
   cursor: pointer;
   
   @media screen and (max-width: ${variables.mobileMin}) {
@@ -85,8 +85,6 @@ export const NavBtnLink = styled(LinkScroll)`
     background: ${variables.accentColor};
     color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  }
-}
-`
+  }` 
 
 
