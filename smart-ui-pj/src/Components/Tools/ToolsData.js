@@ -13,21 +13,21 @@ export const toolsDataBg = {
 export const toolsDataCard1 = {
     icon: Wp,
     title: 'Content Management',
-    text: 'Drupal and WordPress',
+    text: 'WordPress',
     alt:'WordPress',
 };
 
 export const toolsDataCard2 = {
     icon: Js,
     title: 'JavaScript',
-    text: 'React.jx, Node.js, Vue.js',
+    text: 'Vanilla JS, React.jx',
     alt:'JavaScript',
 };
 
 export const toolsDataCard3 = {
     icon: Bs,
     title: 'Popular framework',
-    text: 'Bootstrap 5',
+    text: 'Bootstrap 5, Semantic-UI, Bulma',
     alt:'Bootstrap',
 };
 
@@ -38,10 +38,10 @@ export const toolsDataCard4 = {
     alt:'Css',
 };
 
-export const toolsDataCard5 = {
-    icon: Ag,
-    title: 'Web applications',
-    text: 'HTML, CSS, SASS, LESS',
-    alt:'Angular',
-};
+// export const toolsDataCard5 = {
+//     icon: Ag,
+//     title: 'Web applications',
+//     text: 'HTML, CSS, SASS, LESS',
+//     alt:'Angular',
+// };
 

@@ -38,7 +38,7 @@ const Header = ({ toggle }) => {
       
     )
   }, []);
-  const itHomepage = useLocation().pathname=="/";
+  const itHomepage = useLocation().pathname==="/";
  
   return (
     <NavHeader scrollNav={scrollNav}>

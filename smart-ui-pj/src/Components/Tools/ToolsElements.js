@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import {toolsDataBg} from '../Tools/ToolsData';
 import {variables} from "../../Variables";
 
@@ -43,30 +43,34 @@ export const ToolsText = styled.p`
 export const ToolsCardWrapper = styled.ul`
   display: flex;
   justify-content: center;
-  @media (max-width: ${variables.desktopMin}) {
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  /* @media (max-width: ${variables.desktopMin}) {
     flex-wrap: wrap;
-  };
+  }; */
 `;
 
 export const ToolsCardBox = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #E3E3E3;
+  border: 1px solid ${variables.placeholderFont};
   border-radius: 8px;
-  margin: 5px 5px;
   transition: .3s background;
   background: ${({hover}) => (hover ? `${variables.mainBg}` : '')};
-  width: 20%;
+  box-shadow: ${({hover}) => (hover ? `0px 5px 30px ${variables.placeholderFont}` : '')};
+  flex: 1 1 100%;
+
   padding: 45px 0;
 
-  @media (max-width: ${variables.desktopMin}) {
-    width: 45%;
-    padding-bottom: 20px;
-  };
-  @media (max-width: ${variables.mobileMin}) {
-    width: 100%;
-  };
+  @media (min-width: ${variables.tabletMin}) {
+    flex: 1 1 calc((100% / 2) - 1rem);
+  }
+  
+  @media (min-width: ${variables.wideScreenMin}) {
+    flex: 1 1 calc((100% / 4) - 1rem);
+  }
 `;
 
 export const ToolsCardTextWrap=styled.div`

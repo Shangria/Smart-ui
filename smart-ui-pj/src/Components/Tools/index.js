@@ -13,7 +13,6 @@ import {
     toolsDataCard2,
     toolsDataCard3,
     toolsDataCard4,
-    toolsDataCard5,
 } from "./ToolsData";
 
 const Tools = () => {
@@ -29,7 +28,6 @@ const Tools = () => {
                     <ToolsCard {...toolsDataCard2}/>
                     <ToolsCard {...toolsDataCard3}/>
                     <ToolsCard {...toolsDataCard4}/>
-                    <ToolsCard {...toolsDataCard5}/>
                 </ToolsCardWrapper>
             </ToolsContentWrap>
         </ToolsContainer>
