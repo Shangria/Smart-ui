@@ -3,7 +3,8 @@ import  {Col, Container, Row} from "react-bootstrap";
  
 import HeroSection from "../Components/HeroSection";
 import { HeroTitle } from "../Components/HeroSection/HeroElements";
-import Card from "../Components/portfolio/PortfolioCard";
+import PortfolioCard from "../Components/portfolio/PortfolioCard";
+ 
 
 const Portfolio = () => {
 
@@ -13,18 +14,15 @@ const Portfolio = () => {
     <> 
         <section style={{marginTop:'150px'}}>
             <Container> 
+
                   <HeroTitle style={{textAlign:'center'}}>
                      Our portfolio 
-                </HeroTitle>
-               
+                 </HeroTitle> 
                 <Row xs={1}  md={2}  lg={3}>
-                       {data.map((i )=>    <Card/>   )} 
-
-                     
+                       {data.map((i)=>  (<Col key={i}>  <PortfolioCard/> </Col> )  )}  
                 </Row>
             </Container>  
-        </section> 
-
+        </section>  
     </>
   );
 };
