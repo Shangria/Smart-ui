@@ -4,6 +4,7 @@ export const variables = {
     fontColor: '#302E2D',
     mainBg: '#fff',
     accentColor: '#00D9A6',
+    upworkGreen: '#32a800',
     secondBg: '#BCBCBC',
     menuColor: '#000',
     btColor: '#202020',

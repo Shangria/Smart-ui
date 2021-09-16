@@ -40,6 +40,7 @@ export const WhatWeDoText = styled.p`
 export const WhatWeDoCardContainer = styled.ul`
   display: flex;
   justify-content: center;
+  padding-left: 0;
   @media (max-width: ${variables.desktopMin}) {
     flex-wrap: wrap;
   }

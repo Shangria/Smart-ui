@@ -45,6 +45,7 @@ export const ToolsCardWrapper = styled.ul`
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  padding-left: 0;
 
   /* @media (max-width: ${variables.desktopMin}) {
     flex-wrap: wrap;

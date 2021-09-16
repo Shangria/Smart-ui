@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import {variables} from "../../Variables";
+import { variables } from "../../Variables";
 
 export const ReviewsContainer = styled.section`
   display: flex;
@@ -29,7 +29,7 @@ export const ReviewsTitle = styled.h3`
 
   @media (max-width: ${variables.tabletMin}) {
     font-size: 32px;
-  };
+  } ;
 `;
 
 export const ReviewsText = styled.p`
@@ -50,9 +50,11 @@ export const ReviewsItemBox = styled.div`
   padding: 1rem;
   background-color: white;
   border: 1px solid ${variables.placeholderFont};
-  box-shadow: 0px 5px 30px ${variables.placeholderFont};
+  box-shadow: ${({ hover }) =>
+    hover ? `0px 5px 30px ${variables.placeholderFont}` : ""};
   text-align: center;
   border-radius: 8px;
+  transition: 0.3s box-shadow;
 
   @media (min-width: ${variables.tabletMin}) {
     flex: 1 1 calc((100% / 2) - 1rem);
@@ -64,28 +66,41 @@ export const ReviewsItemBox = styled.div`
 `;
 
 export const ReviewsItemHead = styled.h5`
-  font-size:  1.5rem;
-`;
-
-export const ReviewsItemText = styled.p`
-  
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: ${variables.upworkGreen};
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 `;
 
-export const IconImg = styled.img`
+export const IconImg = styled.div`
   width: 24px;
   height: auto;
   margin-right: 4px;
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  svg {
+    fill: ${variables.upworkGreen};
+  }
+`;
+
+export const ReviewsItemDate = styled.p`
+  font-size: .875rem;
+  font-style: italic;
+  color: ${variables.btColor};
+  opacity: .5;
+  margin-bottom: 1rem;
+`;
+
+export const ReviewsItemText = styled.p`
+  &:last-of-type {
+    margin-bottom: 0;
   }
 `;
