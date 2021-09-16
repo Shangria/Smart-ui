@@ -45,24 +45,18 @@ export const ToolsCardWrapper = styled.ul`
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-
-  /* @media (max-width: ${variables.desktopMin}) {
-    flex-wrap: wrap;
-  }; */
+  padding-left: 0;
 `;
 
 export const ToolsCardBox = styled.li`
+  padding: 45px 0;
   display: flex;
+  flex: 1 1 100%;
   flex-direction: column;
   align-items: center;
   border: 1px solid ${variables.placeholderFont};
   border-radius: 8px;
-  transition: .3s background;
-  background: ${({hover}) => (hover ? `${variables.mainBg}` : '')};
-  box-shadow: ${({hover}) => (hover ? `0px 5px 30px ${variables.placeholderFont}` : '')};
-  flex: 1 1 100%;
-
-  padding: 45px 0;
+  transition: background-color .3s, box-shadow .3s;
 
   @media (min-width: ${variables.tabletMin}) {
     flex: 1 1 calc((100% / 2) - 1rem);
@@ -70,6 +64,11 @@ export const ToolsCardBox = styled.li`
   
   @media (min-width: ${variables.wideScreenMin}) {
     flex: 1 1 calc((100% / 4) - 1rem);
+  }
+
+  &:hover {
+    background-color: ${variables.mainBg};
+    box-shadow: 0px 5px 30px ${variables.placeholderFont};
   }
 `;
 

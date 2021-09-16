@@ -1,18 +1,32 @@
-import React from 'react';
-import {IconContainer, IconImg, ReviewsItemBox, ReviewsItemHead, ReviewsItemText} from './ReviewsElements';
-import star from '../../Images/icon/star.svg';
+import React from "react";
+import {
+  IconContainer,
+  IconImg,
+  ReviewsItemBox,
+  UpworkLogo,
+  ReviewsItemDate,
+  ReviewsItemText,
+} from "./ReviewsElements";
+import { ReactComponent as StarIcon } from "../../Images/icon/star.svg";
+import { ReactComponent as UpworkSVG } from "../../Images/icon/upwork-tile.svg";
 
-const ReviewsItem = ({title, text}) => {
-
+const ReviewsItem = ({ date, text }) => {
   return (
     <ReviewsItemBox>
-      <ReviewsItemHead>{title}</ReviewsItemHead>
+      <UpworkLogo>
+        <UpworkSVG />
+      </UpworkLogo>
 
       <IconContainer>
-        { [...Array(5)].map((_, index) => <IconImg src={star} key={index} alt="start icon" />) }
+        {[...Array(5)].map((_, index) => (
+          <IconImg key={index}>
+            <StarIcon />
+          </IconImg>
+        ))}
       </IconContainer>
+      <ReviewsItemDate>{date}</ReviewsItemDate>
 
-      <ReviewsItemText>{text}</ReviewsItemText>
+      <ReviewsItemText>"{text}"</ReviewsItemText>
     </ReviewsItemBox>
   );
 };

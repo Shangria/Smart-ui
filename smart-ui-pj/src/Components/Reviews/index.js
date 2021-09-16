@@ -13,6 +13,7 @@ import {
   reviewsData2,
   reviewsData3,
   reviewsData4,
+  reviewsData
 } from "./ReviewsData";
 // import ReviewsSlider from "../SliderReviews";
 

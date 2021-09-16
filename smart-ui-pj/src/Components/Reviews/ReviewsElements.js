@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import {variables} from "../../Variables";
+import { variables } from "../../Variables";
 
 export const ReviewsContainer = styled.section`
   display: flex;
@@ -29,7 +29,7 @@ export const ReviewsTitle = styled.h3`
 
   @media (max-width: ${variables.tabletMin}) {
     font-size: 32px;
-  };
+  } ;
 `;
 
 export const ReviewsText = styled.p`
@@ -38,21 +38,20 @@ export const ReviewsText = styled.p`
 `;
 
 export const ReviewsItemsContainer = styled.div`
-  margin: 0 -20px;
-  padding: 20px;
   display: flex;
-  gap: 1rem;
+  gap: 3rem 1rem;
   flex-wrap: wrap;
 `;
 
 export const ReviewsItemBox = styled.div`
   flex: 1 1 100%;
-  padding: 1rem;
+  padding: 2.5rem 1rem 2rem;
   background-color: white;
   border: 1px solid ${variables.placeholderFont};
-  box-shadow: 0px 5px 30px ${variables.placeholderFont};
   text-align: center;
   border-radius: 8px;
+  position: relative;
+  transition: 0.3s box-shadow;
 
   @media (min-width: ${variables.tabletMin}) {
     flex: 1 1 calc((100% / 2) - 1rem);
@@ -61,31 +60,57 @@ export const ReviewsItemBox = styled.div`
   @media (min-width: ${variables.wideScreenMin}) {
     flex: 1 1 calc((100% / 4) - 1rem);
   }
+
+  &:hover {
+    box-shadow: 0px 5px 30px ${variables.placeholderFont};
+  }
+`;
+
+export const UpworkLogo = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50px;
+  height: 50px;
 `;
 
 export const ReviewsItemHead = styled.h5`
-  font-size:  1.5rem;
-`;
-
-export const ReviewsItemText = styled.p`
-  
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: ${variables.upworkGreen};
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 `;
 
-export const IconImg = styled.img`
+export const IconImg = styled.div`
   width: 24px;
   height: auto;
   margin-right: 4px;
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  svg {
+    fill: ${variables.upworkGreen};
+  }
+`;
+
+export const ReviewsItemDate = styled.p`
+  font-size: .875rem;
+  font-style: italic;
+  color: ${variables.btColor};
+  opacity: .5;
+  margin-bottom: 1rem;
+`;
+
+export const ReviewsItemText = styled.p`
+  &:last-of-type {
+    margin-bottom: 0;
   }
 `;

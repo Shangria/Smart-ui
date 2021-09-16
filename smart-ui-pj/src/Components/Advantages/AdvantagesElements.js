@@ -38,6 +38,7 @@ export const AdvantagesText = styled.p`
 export const AdvantagesCardWrapper = styled.ul`
   display: flex;
   justify-content: space-between;
+  padding-left: 0;
   @media (max-width: ${variables.desktopMin}) {
     flex-wrap: wrap;
     justify-content: center;
