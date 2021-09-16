@@ -38,22 +38,19 @@ export const ReviewsText = styled.p`
 `;
 
 export const ReviewsItemsContainer = styled.div`
-  margin: 0 -20px;
-  padding: 20px;
   display: flex;
-  gap: 1rem;
+  gap: 3rem 1rem;
   flex-wrap: wrap;
 `;
 
 export const ReviewsItemBox = styled.div`
   flex: 1 1 100%;
-  padding: 1rem;
+  padding: 2.5rem 1rem 2rem;
   background-color: white;
   border: 1px solid ${variables.placeholderFont};
-  box-shadow: ${({ hover }) =>
-    hover ? `0px 5px 30px ${variables.placeholderFont}` : ""};
   text-align: center;
   border-radius: 8px;
+  position: relative;
   transition: 0.3s box-shadow;
 
   @media (min-width: ${variables.tabletMin}) {
@@ -63,6 +60,19 @@ export const ReviewsItemBox = styled.div`
   @media (min-width: ${variables.wideScreenMin}) {
     flex: 1 1 calc((100% / 4) - 1rem);
   }
+
+  &:hover {
+    box-shadow: 0px 5px 30px ${variables.placeholderFont};
+  }
+`;
+
+export const UpworkLogo = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50px;
+  height: 50px;
 `;
 
 export const ReviewsItemHead = styled.h5`

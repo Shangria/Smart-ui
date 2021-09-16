@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   ToolsCardBox,
   ToolsCadTitle,
@@ -8,18 +8,9 @@ import {
 } from "./ToolsElements";
 
 const ToolsCard = ({ icon, title, text, alt }) => {
-  const [ToolsCardHover, ToolsCardSetHover] = useState(false);
-
-  useEffect(() => {
-    ToolsCardSetHover(ToolsCardHover);
-  }, [ToolsCardHover]);
 
   return (
-    <ToolsCardBox
-      onMouseEnter={() => ToolsCardSetHover(true)}
-      onMouseLeave={() => ToolsCardSetHover(false)}
-      hover={ToolsCardHover}
-    >
+    <ToolsCardBox>
       <ToolsIconWrap>
         <img src={icon} alt={alt} />
       </ToolsIconWrap>

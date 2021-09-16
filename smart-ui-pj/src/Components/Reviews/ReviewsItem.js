@@ -1,28 +1,28 @@
-import React, {useEffect, useState} from 'react';
-import {IconContainer, IconImg, ReviewsItemBox, ReviewsItemHead, ReviewsItemDate, ReviewsItemText} from './ReviewsElements';
-import {ReactComponent as StarIcon} from '../../Images/icon/star.svg';
+import React from "react";
+import {
+  IconContainer,
+  IconImg,
+  ReviewsItemBox,
+  UpworkLogo,
+  ReviewsItemDate,
+  ReviewsItemText,
+} from "./ReviewsElements";
+import { ReactComponent as StarIcon } from "../../Images/icon/star.svg";
+import { ReactComponent as UpworkSVG } from "../../Images/icon/upwork-tile.svg";
 
-const ReviewsItem = ({title, date, text}) => {
-  const [ReviewsBoxHover, ReviewsBoxSetHover] = useState(false);
-
-  useEffect(() => {
-    ReviewsBoxSetHover(ReviewsBoxHover);
-  }, [ReviewsBoxHover]);
-
+const ReviewsItem = ({ date, text }) => {
   return (
-    <ReviewsItemBox 
-      onMouseEnter={() => ReviewsBoxSetHover(true)}
-      onMouseLeave={() => ReviewsBoxSetHover(false)}
-      hover={ReviewsBoxHover}
-    >
-      <ReviewsItemHead>{title}</ReviewsItemHead>
+    <ReviewsItemBox>
+      <UpworkLogo>
+        <UpworkSVG />
+      </UpworkLogo>
 
       <IconContainer>
-        { [...Array(5)].map((_, index) => (
+        {[...Array(5)].map((_, index) => (
           <IconImg key={index}>
             <StarIcon />
           </IconImg>
-        )) }
+        ))}
       </IconContainer>
       <ReviewsItemDate>{date}</ReviewsItemDate>
 
