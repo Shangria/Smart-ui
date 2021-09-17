@@ -1,10 +1,11 @@
-import styled from 'styled-components';
-import {contactData} from "./ContactData";
-import {variables} from "../../Variables";
+import styled from "styled-components";
+import { contactData } from "./ContactData";
+import { variables } from "../../Variables";
 
 export const ContactWrapper = styled.section`
   padding: 8% 0;
-  background-image: url(${contactData.bg3}), url(${contactData.bg2}), url(${contactData.bg1});
+  background-image: url(${contactData.bg3}), url(${contactData.bg2}),
+    url(${contactData.bg1});
   background-repeat: no-repeat;
   background-position: 95% 180%, 100% 0, 100% 0;
   background-size: 140% 90%, cover, cover;
@@ -66,7 +67,6 @@ export const ContactAddressContainer = styled.div`
     width: 65%;
     flex-direction: column;
   }
-
 `;
 export const ContactSubTitle = styled.h4`
   color: ${variables.accentColor};
@@ -105,11 +105,22 @@ export const ContactLinks = styled.div`
 export const ContactIcon = styled.img`
   width: 34px;
   height: 34px;
-  margin-right: 20px
+  margin-right: 20px;
 `;
 
 export const ContactLink = styled.a`
-  word-break: break-all;
+  display: flex;
+  align-items: center;
+
+  span {
+    transition: transform .3s;
+  }
+
+  &:hover {
+    span {
+      transform: translateX(4px);
+    }
+  }
 `;
 
 export const ContactFormWrapper = styled.div`
@@ -133,7 +144,6 @@ export const ContactFormTitle = styled.h3`
   @media (min-width: ${variables.desktopMin}) {
     align-self: flex-start;
   }
-}
 `;
 
 export const ContactFormContent = styled.form`
@@ -152,13 +162,12 @@ export const ContactFormData = styled.div`
   @media (min-width: ${variables.desktopMin}) {
     flex-direction: row;
   }
-
 `;
 export const ContactFormDataInput = styled.input`
   display: block;
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #7C7B7B;
+  border: 1px solid #7c7b7b;
   width: 100%;
   margin: 5px 0 10px;
   font-size: 16px;
@@ -177,7 +186,7 @@ export const ContactFormMessage = styled.textarea`
   display: block;
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #7C7B7B;
+  border: 1px solid #7c7b7b;
   width: 100%;
   margin: 5px 0 10px;
   font-size: 16px;
@@ -210,13 +219,13 @@ export const ContactFormError = styled.p`
   border-radius: 20px;
   width: 180px;
   box-shadow: 4px 4px 10px rgb(170 170 170 / 80%);
-  
-    :before {
+
+  :before {
     border-top: 7px solid rgba(255, 255, 255, 0.85);
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
     bottom: -5px;
-    content: '';
+    content: "";
     display: block;
     left: 20%;
     margin-left: -7px;
@@ -225,8 +234,5 @@ export const ContactFormError = styled.p`
 
   @media (min-width: ${variables.mobileMax}) {
     top: 0;
+  }
 `;
-
-
-
-

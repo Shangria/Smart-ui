@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-7        
+      
         
         const ResponsiveImg = ({src , h, w, alt}) => {
                 const StContainer=styled.div` 

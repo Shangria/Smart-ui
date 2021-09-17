@@ -12,7 +12,7 @@ import {
   NavItem,
   MobileIcon,
 } from "./HeaderElements";
-import { useLocation, useRouteMatch } from "react-router";
+import { useLocation } from "react-router";
 
 const Header = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);

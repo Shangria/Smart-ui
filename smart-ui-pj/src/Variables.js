@@ -20,4 +20,6 @@ export const variables = {
     wideScreenMin: '1200px',
     wideScreenXl: '1440px',
     wideScreenMax: '1800px',
+    UPWORK_LINK: 'https://www.upwork.com/o/companies/~01e25310f9dbd13dbb/',
+    LINKEDIN_LINK: 'https://www.linkedin.com/in/smart-ui-company/'
 };

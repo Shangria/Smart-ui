@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import {variables} from "../../Variables";
 import {heroData} from './HeroData';
 
@@ -126,7 +126,7 @@ export const HeroSocialLink = styled.a`
   border-radius: 6px;
   border: 1px solid #F2F2F2;
   box-shadow: 4px 4px 10px rgba(170, 170, 170, 0.13);
-  color: ${props => props.upwork ? variables.accentColor : variables.fontColor};
+  color: ${props => props.upwork ? variables.upworkGreen : variables.fontColor};
   background-color: #ffffff;
   transition: box-shadow .3s;
 
@@ -140,6 +140,7 @@ export const HeroSocialLink = styled.a`
 
   &:hover {
     box-shadow: 4px 4px 10px rgba(170, 170, 170, 0.73);
+    color: ${props => props.upwork ? '' : variables.fontColor};
   }
 `;
 
