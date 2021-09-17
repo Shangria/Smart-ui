@@ -69,6 +69,9 @@ export const AdvantagesCardBox = styled.li`
 export const AdvantagesCardTextWrap = styled.div`
   text-align: center;
   padding: 0 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const AdvantagesIconWrap = styled.div`
@@ -102,5 +105,6 @@ export const ButtonWrap = styled.div`
   max-height: 100%;
   display: flex;
   justify-content: center;
+  margin-top: auto;
 `;
 

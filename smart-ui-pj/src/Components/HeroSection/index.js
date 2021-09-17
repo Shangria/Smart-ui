@@ -50,8 +50,8 @@ const HeroSection = () => {
           <HeroSocialMedia>
             <HeroSocialMediaText>Our social media:</HeroSocialMediaText>
             <HeroSocialIcons>
-							<SocialLink href='https://www.upwork.com/o/companies/~01e25310f9dbd13dbb/' upwork text={'UpWork'} icon={heroData.upWork}/>
-							<SocialLink href='https://www.linkedin.com/in/smart-ui-company/' text={'LinkedIn'} icon={heroData.linkedIn}/>
+							<SocialLink href={variables.UPWORK_LINK} upwork text={'UpWork'} icon={heroData.upWork}/>
+							<SocialLink href={variables.LINKEDIN_LINK} text={'LinkedIn'} icon={heroData.linkedIn}/>
             </HeroSocialIcons>
           </HeroSocialMedia>
         </HeroTitleContainer>

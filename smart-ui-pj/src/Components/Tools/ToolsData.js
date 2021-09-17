@@ -3,7 +3,6 @@ import Wp from '../../Images/icon/wordpress-drupal.svg';
 import Js from '../../Images/icon/javascript-logo.svg';
 import Bs from '../../Images/icon/bootstrap.svg';
 import Css from '../../Images/icon/cssHtml.svg';
-import Ag from '../../Images/icon/angular.svg';
 
 
 export const toolsDataBg = {

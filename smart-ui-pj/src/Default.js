@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components/macro';
+import {createGlobalStyle} from 'styled-components';
 import {variables} from "./Variables";
 
 export const DefaultStyle = createGlobalStyle`
@@ -21,6 +21,11 @@ export const DefaultStyle = createGlobalStyle`
   a {
     display: inline-block;
     color: ${variables.fontColor};
+    transition: color .2s;
+
+    &:hover {
+      color: ${variables.upworkGreen};
+    }
   }
 
   h3 {
