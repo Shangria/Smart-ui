@@ -1,11 +1,7 @@
 import styled from "styled-components";
-
-7        
-        
-        const ResponsiveImg = ({src , h, w, alt}) => {
-                const StContainer=styled.div` 
+               const StContainer=styled.div` 
                    position: relative;
-                   padding-bottom: ${h/w*100+"%"};
+                   padding-bottom: ${({h,w})=>(h/w*100+"%")};
                    figure{
                         position: absolute;
                         padding:0;
@@ -21,10 +17,13 @@ import styled from "styled-components";
                         height: 100%;
                         object-fit: cover;
                     }
-                `
+                ` 
+        
+        const ResponsiveImg = ({src , h, w, alt}) => {
+        
 
             return (
-             <StContainer> 
+             <StContainer h={h} w={w}> 
                               <figure>
                                     <img src={src} alt={alt} />
                               </figure> 

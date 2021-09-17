@@ -9,8 +9,7 @@ position: relative;
 transition: 0.3s; 
 
         &::after{
-            content: ""; 
-            
+            content: "";  
             background-color: #3874b911;
             position: absolute; 
             left:0;
