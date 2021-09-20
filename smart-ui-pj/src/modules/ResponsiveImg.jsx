@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LoadingLine from "./LoadingLine";
                const StContainer=styled.div` 
                    position: relative;
                    padding-bottom: ${({h,w})=>(h/w*100+"%")};
@@ -19,13 +20,12 @@ import styled from "styled-components";
                     }
                 ` 
         
-        const ResponsiveImg = ({src , h, w, alt}) => {
-        
-
+        const ResponsiveImg = ({src , h, w, alt}) => { 
             return (
              <StContainer h={h} w={w}> 
                               <figure>
-                                    <img src={src} alt={alt} />
+                                  {src? <img src={src} alt={alt} /> :<LoadingLine h="100%" m="0" d="180"/>}
+                                   
                               </figure> 
              </StContainer>
             );

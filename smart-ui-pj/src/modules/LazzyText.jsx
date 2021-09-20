@@ -5,7 +5,9 @@ const LazzyText = ({proptext , interval ,timeout}) => {
 useEffect(() => { 
     let result=""
     let i=0;
-    setTimeout(() => {
+    if(proptext.length>1){
+        console.log(proptext);
+        setTimeout(() => {
         const lazzyTitle=setInterval(() => {
             if(i>proptext.length-2||i>500){
                 clearInterval(lazzyTitle)
@@ -15,8 +17,7 @@ useEffect(() => {
           i++;
           }, interval);
     }, timeout);
-   
-        
+    }       
 }, [])
     return (
         <span>{text}</span>

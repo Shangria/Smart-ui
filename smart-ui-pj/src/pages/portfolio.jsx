@@ -8,20 +8,16 @@ import PortfolioCard from "../Components/portfolio/PortfolioCard";
 
 
 const Portfolio = () => {
-const [data ,setData]  = useState([])
+const [data ,setData]  = useState([0,0,0,0,0,0])
   useEffect(() => { 
        fetch("http://wdev.smart-ui.pro/wp-json/wp/v2/posts") 
         .then((response) => {
           return response.json();
         })
-        .then((rest) => {
-          console.log(rest)
-          setData(rest);
+        .then((rest) => { 
+          Array.isArray(rest)?setData(rest):console.log('wp connection lost');
         }); 
-  }, [])
-        
-  
-
+  }, []) 
 
   return (
     <> 

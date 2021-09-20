@@ -3,25 +3,30 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BorderButton from "../../modules/Buttons";
 import LazzyText from "../../modules/LazzyText";
+import LoadingLine from "../../modules/LoadingLine";
 import ResponsiveImg from "../../modules/ResponsiveImg";
 import { StyledCard } from "./StyledCard";
 
 const PortfolioCard = ({link , dataWp , i}) => {
-  
-  console.log(dataWp , "data")
-  function innerhtml(text) { return {__html: text}; };
- 
+   
+  function innerhtml(text) { return {__html: text}; }; 
 return (
    
 <StyledCard >
    <Link className="link" to={link}/>
     <ResponsiveImg h="9" w={16} alt="website preview"
-        src="https://thumbs.dreamstime.com/b/%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB-gool-20971928.jpg" /> 
+        src="" /> 
         <div className="description">
                 <h3>
-                <LazzyText proptext={dataWp?.title?.rendered} timeout={1000*i} interval={100}/>
+               { dataWp?.title?.rendered? <LazzyText proptext={dataWp?.title?.rendered} timeout={1000*i} interval={100}/> : <LoadingLine/>   }
+               
                 </h3> 
-                <p dangerouslySetInnerHTML={innerhtml(dataWp?.acf?.short_description)}/>
+               { dataWp?.acf?.short_description?  <p dangerouslySetInnerHTML={innerhtml(dataWp?.acf?.short_description)}/>:<>
+               <LoadingLine h="20px" w="40%" d="300ms" />
+               <LoadingLine h="20px" w="90%" d="600ms"/>
+               <LoadingLine h="20px" w="55%" />
+               </> }
+               
               
                  
         </div>
