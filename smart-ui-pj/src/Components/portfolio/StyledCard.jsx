@@ -2,13 +2,15 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
+      height:100%;
+      display: flex;
+      flex-direction: column;
    width:100%;
    position:relative;
     text-decoration: none; 
     border: 1px solid rgb(227, 227, 227);
     border-radius: 8px; 
-    color: rgb(48, 46, 45); 
-    margin-bottom: 10px;
+    color: rgb(48, 46, 45);  
     overflow:hidden; 
      border:solid #e2e2e2 1px;  
       border-radius: 10px; 
@@ -37,9 +39,10 @@ export const StyledCard = styled.div`
             margin-bottom: 10px;
       }
       .description{
+            flex-grow: 1;
             z-index:2;
             position:relative;
-            padding: 20px;
+            padding:10px 20px 5px;
       }
       .button-container{
             padding: 10px;

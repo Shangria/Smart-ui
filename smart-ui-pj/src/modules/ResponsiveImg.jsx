@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LazzyImg from "./LazzyImg";
 import LoadingLine from "./LoadingLine";
                const StContainer=styled.div` 
                    position: relative;
@@ -11,7 +12,7 @@ import LoadingLine from "./LoadingLine";
                         top:0;
                         bottom: 0;
                         right: 0;
-                        background-color: #8effc12f;
+                        background-color: #6464642e;
                     }
                     img{
                         width: 100%;
@@ -20,11 +21,11 @@ import LoadingLine from "./LoadingLine";
                     }
                 ` 
         
-        const ResponsiveImg = ({src , h, w, alt}) => { 
+        const ResponsiveImg = ({src , h, w, alt , imgMin, imgFull, imgMedium}) => { 
             return (
              <StContainer h={h} w={w}> 
                               <figure>
-                                  {src? <img src={src} alt={alt} /> :<LoadingLine h="100%" m="0" d="180"/>}
+                                  {src||imgMedium||imgFull?  <LazzyImg  min={imgMin} medium={imgMedium} full={imgFull} alt={alt?alt:"webpage screenshot" }/>  :<LoadingLine h="100%" m="0" d="180"/>}
                                    
                               </figure> 
              </StContainer>

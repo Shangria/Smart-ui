@@ -25,9 +25,7 @@ color: transparent;
 background: linear-gradient(90deg, #e0e0e0 0%, #c7c7c7 100%);
 
 `
-const LoadingLine = ({h,w,d,m}) => {
-
-
+const LoadingLine = ({h,w,d,m}) => { 
     return (
         <Load style={{height:h?h:"" , width:w?w:"" , margin:m?m:"10px 0" }}  d={d?d:0}>
             loading...

@@ -30,7 +30,7 @@ const Header = ({ toggle }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", opacityChange);
-    console.log('start');
+  
     return (
       ()=>{
           window.removeEventListener('scroll', opacityChange); 

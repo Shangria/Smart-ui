@@ -1,6 +1,6 @@
 export const reviewsData1 = {
   date: "Sep 4, 2021 - Sep 8, 2021",
-  text: "Job well done!",
+  text: "You will not regret hiring Alex. He was working for us (Weorder) for over two years and delivered the craziest (in a good sense) CSS designs stretching the looks of customised apps to the extent I did not know was possible <br> Alex is hard-working, pro-active and will deliver on the tasks given to him beyond limits. Always responsive and keen for the next challenge. Just make sure the instructions and boundaries are clear as his creativity hits high 😁On top of being a strong addition to your workforce, he is very nice to talk to and keeps up good vibes.",
 };
 
 export const reviewsData2 = {

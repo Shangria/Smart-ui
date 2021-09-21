@@ -16,6 +16,7 @@ const [data ,setData]  = useState([0,0,0,0,0,0])
         })
         .then((rest) => { 
           Array.isArray(rest)?setData(rest):console.log('wp connection lost');
+          console.log(rest)
         }); 
   }, []) 
 
@@ -23,11 +24,11 @@ const [data ,setData]  = useState([0,0,0,0,0,0])
     <> 
         <section style={{marginTop:'150px'}}>
             <Container>  
-                  <HeroTitle style={{textAlign:'center'}}>
+                  <HeroTitle style={{textAlign:'center' , marginBottom:"50px"}}>
                      Our portfolio 
                  </HeroTitle> 
                 <Row xs={1}  md={2}  xl={3}>
-                       {data.map((post,i)=>  (<Col key={i+"a"}>   <PortfolioCard link={"/test"}
+                       {data.map((post,i)=>  (<Col key={i+"a"} style={{marginBottom:"20px"}}>   <PortfolioCard link={"/test"}
                        dataWp={post}  i={i} /> </Col> )  )}  
                 </Row>
             </Container>  

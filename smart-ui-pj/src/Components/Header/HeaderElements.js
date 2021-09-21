@@ -14,7 +14,7 @@ export const NavHeader = styled.header`
   line-height: 1.5;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 12;
   transition: background-color ease-out .5s;
 `;
 
