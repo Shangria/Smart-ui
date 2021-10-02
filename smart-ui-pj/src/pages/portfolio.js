@@ -16,7 +16,7 @@ const [data ,setData]  = useState([0,0,0,0,0,0])
         .then((rest) => { 
           Array.isArray(rest)?setData(rest):console.log('wp connection lost');
           rest.forEach((r) => {
-            console.log(r.acf.link_to_origin_site)
+            // console.log(r.acf)
           }); 
         }); 
   }, []) 

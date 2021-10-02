@@ -14,22 +14,54 @@ export const StyledCard = styled.div`
     overflow:hidden; 
      border:solid #e2e2e2 1px;  
       border-radius: 10px; 
+      .images-container{
+            position: relative;
+      }
+      .left-column , .right-column{
+            padding: 5px;
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows:repeat(3, 1fr);
+            gap:10px;
+            grid-auto-flow: column;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width:50%;  
+            
+      }
+      .right-column{
+            left:auto;
+            right: 0;
+            grid-template-areas: 
+            "a6 a3 a0"
+            "a7 a4 a1"
+            "a8 a5 a2";
+            background-color: #ddbbbb;
+            .grid-item{
+                
+                  &:nth-child(1){
+                        grid-area: a; 
+                  }
+                 
+            }
+      }
       .link{
             position: absolute;
             top: 0; 
             left: 0;
             bottom: 0;
             right: 0; 
-            z-index:1; 
-     
-         &:hover{
-            &~.button-container a , &~.button-container button{ 
+            z-index:1;  
+            &:hover{
+               &~.button-container a , &~.button-container button{ 
 
-                  &::after{
-                        width: 100%;
-                  }
+                     &::after{
+                           width: 100%;
+                     }
+               }
             }
-      }
       }
       h3{ 
             min-height: 30px;
