@@ -1,5 +1,4 @@
  
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BorderButton from "../../modules/Buttons";
 import LazzyText from "../../modules/LazzyText";
@@ -28,7 +27,7 @@ return (
                 <h3>
                { dataWp?.title?.rendered? <LazzyText proptext={dataWp?.title?.rendered} timeout={1000*i} interval={100}/> : <LoadingLine/>   } 
                 </h3> 
-                {origin?  <a href=" ">website</a>  :    <LoadingLine h="10px" w="30%" d="100ms" />}  
+                {origin?  <a style={{color:"blue" ,textDecoration:"underline"}} href={origin}>website</a>  :    <LoadingLine h="10px" w="30%" d="100ms" />}  
                { dataWp?.acf?.short_description?  <p dangerouslySetInnerHTML={innerhtml(dataWp?.acf?.short_description)}/>:<>
                <LoadingLine h="18px" w="40%" d="300ms" />
                <LoadingLine h="18px" w="90%" d="600ms"/>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import  {Col, Container, Row} from "react-bootstrap";
- 
-import HeroSection from "../Components/HeroSection";
+  
 import { HeroTitle } from "../Components/HeroSection/HeroElements";
 import PortfolioCard from "../Components/portfolio/PortfolioCard";
 
@@ -16,10 +15,12 @@ const [data ,setData]  = useState([0,0,0,0,0,0])
         })
         .then((rest) => { 
           Array.isArray(rest)?setData(rest):console.log('wp connection lost');
-          console.log(rest)
+          rest.forEach((r) => {
+            console.log(r.acf.link_to_origin_site)
+          }); 
         }); 
   }, []) 
-
+   
   return (
     <> 
         <section style={{marginTop:'150px'}}>
