@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import  {Col, Container, Row} from "react-bootstrap";
+import { useHistory } from "react-router";
   
 import { HeroTitle } from "../Components/HeroSection/HeroElements";
 import PortfolioCard from "../Components/portfolio/PortfolioCard";
@@ -8,11 +9,14 @@ import PortfolioCard from "../Components/portfolio/PortfolioCard";
 
 const Portfolio = () => {
 const [data ,setData]  = useState([0,0,0,0,0,0])
+const hist = useHistory();
   useEffect(() => { 
     window.scrollTo({
       top: 0,
       behavior: "smooth"
   });
+ 
+  console.log(hist.push("#1"));
        fetch("http://wdev.smart-ui.pro/wp-json/wp/v2/posts") 
         .then((response) => {
           return response.json();

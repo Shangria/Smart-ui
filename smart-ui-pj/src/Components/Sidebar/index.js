@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router";
 import {
     SidebarContainer,
     Icon,
@@ -13,7 +14,7 @@ import {
 } from "./SidebarElements";
 
 const Sidebar = ({isOpen, toggle}) => {
-
+    const itHomepage = useLocation().pathname==="/";
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
@@ -22,16 +23,16 @@ const Sidebar = ({isOpen, toggle}) => {
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLinkWrap>
-                        <SidebarLink to='home' onClick={toggle}>Home</SidebarLink>
+                  {  itHomepage?<SidebarLink to='home' onClick={toggle}>Home</SidebarLink>:<SidebarLinkToPortfolio to='./'>  Home </SidebarLinkToPortfolio>}
                     </SidebarLinkWrap>
-                    <SidebarLinkWrap>
+              {    itHomepage&&<SidebarLinkWrap>
                         <SidebarLink to='whatWeDo' onClick={toggle}>What we do</SidebarLink>
-                    </SidebarLinkWrap>
-                    <SidebarLinkWrap>
+                    </SidebarLinkWrap>}
+               {     itHomepage&&<SidebarLinkWrap>
                         <SidebarLink to='ourAdvantages' onClick={toggle}>Our advantages</SidebarLink>
-                    </SidebarLinkWrap>
+                    </SidebarLinkWrap>}
                     <SidebarLinkWrap>
-                        <SidebarLinkToPortfolio to='#' onClick={toggle}>Portfolio</SidebarLinkToPortfolio>
+                        <SidebarLinkToPortfolio to='./portfolio' onClick={toggle}>Portfolio</SidebarLinkToPortfolio>
                     </SidebarLinkWrap>
                 </SidebarMenu>
                 <SideBtnWrap>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {variables} from "../../Variables";
-import {Link, Link as LinkR} from 'react-router-dom';
+import {Link,NavLink} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 
 export const NavHeader = styled.header`
@@ -69,7 +69,8 @@ export const NavLinks = styled(LinkScroll)`
   }
 `;
 
-export const NavLinkToPortfolio=styled(LinkR)`
+export const NavLinkToPortfolio=styled(NavLink)`
+ 
   cursor: pointer;
 `;
 

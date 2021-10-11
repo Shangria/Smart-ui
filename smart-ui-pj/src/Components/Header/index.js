@@ -93,7 +93,7 @@ const Header = ({ toggle }) => {
                  <NavLinkToPortfolio to="/">Home</NavLinkToPortfolio>
                </NavItem>} 
           <NavItem>
-            <NavLinkToPortfolio to="portfolio">Portfolio</NavLinkToPortfolio>
+            <NavLinkToPortfolio to="./portfolio">Portfolio</NavLinkToPortfolio>
           </NavItem>
           <NavItem>
             <NavBtnLink to="contactUs">Contact us</NavBtnLink>
