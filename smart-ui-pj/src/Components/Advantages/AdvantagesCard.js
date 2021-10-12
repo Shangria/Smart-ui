@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ButtonSend } from "../ButtonElement";
 import {
   AdvantagesCadTitle,
@@ -10,24 +10,15 @@ import {
 } from "./AdvantagesElements";
 
 const AdvantagesCard = ({ logo, cardTitle, cardText, btn, altAdvantages }) => {
-  const [advantagesHover, advantagesSetHover] = useState(false);
-
-  useEffect(() => {
-    advantagesSetHover(advantagesHover);
-  }, [advantagesHover]);
 
   return (
     <AdvantagesCardBox
-      onMouseEnter={() => advantagesSetHover(true)}
-      onMouseLeave={() => advantagesSetHover(false)}
-      hover={advantagesHover}
     >
-      <AdvantagesIconWrap hover={advantagesHover}>
+      <AdvantagesIconWrap>
         <img style={{ height: "100%" }} src={logo} alt={altAdvantages} />
       </AdvantagesIconWrap>
       <AdvantagesCardTextWrap>
         <AdvantagesCadTitle>{cardTitle}</AdvantagesCadTitle>
-        {advantagesHover ? (
           <ButtonWrap>
             <ButtonSend
 							as="a" href="#contactUs"
@@ -39,12 +30,8 @@ const AdvantagesCard = ({ logo, cardTitle, cardText, btn, altAdvantages }) => {
             >
               {btn}
             </ButtonSend>
-          </ButtonWrap>
-        ) : (
-          <ButtonWrap>
             <AdvantagesCardText>{cardText}</AdvantagesCardText>
           </ButtonWrap>
-        )}
       </AdvantagesCardTextWrap>
     </AdvantagesCardBox>
   );

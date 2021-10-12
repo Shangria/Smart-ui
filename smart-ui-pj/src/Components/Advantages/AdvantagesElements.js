@@ -45,39 +45,16 @@ export const AdvantagesCardWrapper = styled.ul`
   };
 `;
 
-export const AdvantagesCardBox = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #E3E3E3;
-  border-radius: 8px;
-  margin: 5px 5px;
-  transition: .3s background;
-  background: ${({hover}) => (hover ? `${variables.accentColor}` : `${variables.mainBg}`)};
-  width: 30%;
-  padding: 45px 0;
-
+export const AdvantagesCardText = styled.p`
   @media (max-width: ${variables.desktopMin}) {
-    width: 45%;
-    padding-bottom: 12%;
+    text-align: center;
   };
-  @media (max-width: ${variables.mobileMax}) {
-    width: 100%;
-  };
-`;
-
-export const AdvantagesCardTextWrap = styled.div`
-  text-align: center;
-  padding: 0 20px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 `;
 
 export const AdvantagesIconWrap = styled.div`
   height: 212px;
   width: 212px;
-  background-color: ${({hover}) => (hover ? `${variables.mainBg}` : `${variables.accentColor}`)};
+  background-color: ${variables.accentColor};
   border-radius: 25px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -88,21 +65,74 @@ export const AdvantagesIconWrap = styled.div`
   padding-top: 10px;
 `;
 
+export const AdvantagesCardBox = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  margin: 5px 5px;
+  transition: .3s background;
+  background: ${variables.mainBg};
+  width: 30%;
+  padding: 45px 0;
+
+  @media (max-width: ${variables.desktopMin}) {
+    width: 45%;
+  };
+  @media (max-width: ${variables.mobileMax}) {
+    width: 100%;
+  };
+
+  a {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+    z-index: 1;
+    white-space: nowrap;
+    transition: .4s;
+  }
+  p${AdvantagesCardText} {
+    opacity: 1;
+    transition: .3s;
+  }
+  div${AdvantagesIconWrap} {
+    transition: .4s;
+  }
+
+  &:hover {
+    background: ${variables.accentColor};
+
+    a {
+      opacity: 1;
+    }
+    p${AdvantagesCardText} {
+      opacity: 0;
+    }
+    div${AdvantagesIconWrap} {
+      background: ${variables.mainBg};
+    }
+  }
+`;
+
+export const AdvantagesCardTextWrap = styled.div`
+  text-align: center;
+  padding: 0 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const AdvantagesCadTitle = styled.h3`
   font-size: 22px;
   padding-bottom: 6px;
   text-align: center;
 `;
 
-export const AdvantagesCardText = styled.p`
-  @media (max-width: ${variables.desktopMin}) {
-    text-align: center;
-  };
-`;
-
 export const ButtonWrap = styled.div`
-  height: 100px;
-  max-height: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   margin-top: auto;
