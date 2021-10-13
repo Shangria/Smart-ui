@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from "react";
 import  {Col, Container, Row} from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+ 
 import { useHistory } from "react-router";
   
 import { HeroTitle } from "../Components/HeroSection/HeroElements";
 import PortfolioCard from "../Components/portfolio/PortfolioCard";
+import { FETCH__POSTS } from "../redux/types";
+import { allPostsFetchAction } from '../redux/actions'
 
 
-
-const Portfolio = () => {
-const [data ,setData]  = useState([0,0,0,0,0,0])
-const hist = useHistory();
+const Portfolio = ( ) => {
+const [data ,setData]  = useState([0,0,0,0,0,0]) 
+const dispatch = useDispatch();
+  // const allPosts = useSelector(state=>state.postReducer);
+   
+//  console.log(allPosts) 
+   dispatch(  allPostsFetchAction) 
   useEffect(() => { 
     window.scrollTo({
       top: 0,
       behavior: "smooth"
-  });
- 
-  console.log(hist.push("#1"));
+  }); 
        fetch("http://wdev.smart-ui.pro/wp-json/wp/v2/posts") 
         .then((response) => {
           return response.json();
@@ -45,4 +50,5 @@ const hist = useHistory();
     </>
   );
 };
-export default Portfolio;
+ 
+export default  Portfolio ;

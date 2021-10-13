@@ -27,6 +27,8 @@ const PortfolioCard = ({ dataWp , i}) => {
              clearInterval(t);
         }
     }, [ ])
+
+
 return (
    
 <StyledCard >
